@@ -11,13 +11,25 @@ const ServiceCard = ({ index, title, icon, isArabic }) => (
   <Tilt className="w-full sm:w-[250px]">
     <motion.div
       variants={fadeIn("right", "spring", index * 0.3, 0.75)}
+      whileHover={{ 
+        scale: 1.05, 
+        rotateY: 5, 
+        rotateX: 5,
+        boxShadow: "0 20px 40px rgba(102, 126, 234, 0.3)"
+      }}
+      whileTap={{ scale: 0.95 }}
       className="glass-card hover-lift p-6 shadow-lg transition-all duration-300 group"
     >
       <div className="flex flex-col items-center text-center gap-4">
-        <div className="w-20 h-20 rounded-full ond-bg-gradient p-4 group-hover:scale-110 transition-transform duration-300">
+        <motion.div 
+          whileHover={{ rotate: 360, scale: 1.2 }}
+          transition={{ duration: 0.6 }}
+          className="w-20 h-20 rounded-full ond-bg-gradient p-4 group-hover:scale-110 transition-transform duration-300 glow-animation"
+        >
           <img src={icon} alt={title} className="w-full h-full object-contain filter brightness-0 invert" />
-        </div>
-        <h3
+        </motion.div>
+        <motion.h3
+          whileHover={{ scale: 1.05 }}
           className={`text-white text-[16px] font-semibold ${
             isArabic
               ? "font-tajawal text-center sm:text-right"
@@ -25,7 +37,7 @@ const ServiceCard = ({ index, title, icon, isArabic }) => (
           }`}
         >
           {title}
-        </h3>
+        </motion.h3>
       </div>
     </motion.div>
   </Tilt>

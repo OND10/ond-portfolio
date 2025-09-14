@@ -40,7 +40,9 @@ const Navbar = () => {
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
+      document.documentElement.classList.remove("light");
     } else {
+      document.documentElement.classList.add("light");
       document.documentElement.classList.remove("dark");
     }
     localStorage.setItem("darkMode", darkMode);
@@ -61,9 +63,9 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 transition-colors duration-300 ${
+      } w-full flex items-center py-5 fixed top-0 z-20 transition-all duration-300 ${
         scrolled
-          ? "enhanced-glass shadow-lg"
+          ? "enhanced-glass shadow-lg backdrop-blur-md"
           : "bg-transparent"
       }`}
     >
