@@ -1,0 +1,70 @@
+- .gitignore
+- eslint.config.js
+- index.html
+- package-lock.json
+- package.json
+- postcss.config.js
+- project_structure.text
+- README.md
+- src
+  - App.jsx
+  - assets
+    - company
+      - gdsc.png
+      - rts.png
+      - ycit.png
+    - fonts
+      - malgun.ttf
+      - Mars.ttf
+    - github.png
+    - herobg.png
+    - index.js
+    - logo1.png
+    - menu.png
+    - menu.svg
+    - p1.png
+    - p2.png
+    - p3.png
+    - photo.png
+    - tech
+      - cplusplus.svg
+      - csharp.svg
+      - dart.svg
+      - dotnetcore.svg
+      - flutter.svg
+      - git.png
+      - javascript.png
+      - nodejs.png
+      - playwright.svg
+      - postman.svg
+      - python.svg
+      - reactjs.png
+      - tailwind.png
+      - threejs.svg
+  - components
+    - About.jsx
+    - Contact.jsx
+    - Experience.jsx
+    - Feedbacks.jsx
+    - Hero.jsx
+    - index.js
+    - Loader.jsx
+    - Navbar.jsx
+    - Partners.jsx
+    - Tech.jsx
+    - Works.jsx
+  - constants
+    - index.js
+  - hoc
+    - index.js
+    - SectionWrapper.jsx
+  - i18n.js
+  - index.css
+  - main.jsx
+  - public
+    - HasanFuaad_CV.pdf
+  - styles.js
+  - utils
+    - motion.js
+- tailwind.config.js
+- vite.config.js
