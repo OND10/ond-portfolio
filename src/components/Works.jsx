@@ -18,7 +18,10 @@ const ProjectCard = ({
   isArabic,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div 
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      whileHover={{ y: -10 }}
+    >
       <Tilt
         options={{
           max: 45,
@@ -28,18 +31,25 @@ const ProjectCard = ({
         className="glass-card hover-lift p-5 sm:w-[360px] w-full shadow-lg transition-all duration-300 group"
       >
         <div className="relative w-full h-[230px] overflow-hidden rounded-2xl">
-          <img
+          <motion.img
+            whileHover={{ scale: 1.1, rotate: 2 }}
             src={image}
             alt="project_image"
             className="w-full h-full object-cover rounded-2xl group-hover:scale-110 transition-transform duration-500"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileHover={{ opacity: 1 }}
+            className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent transition-opacity duration-300" 
+          />
 
           {source_code_link && (
             <div className="absolute inset-0 flex justify-end m-3">
-              <div
+              <motion.div
+                whileHover={{ scale: 1.2, rotate: 10 }}
+                whileTap={{ scale: 0.9 }}
                 onClick={() => window.open(source_code_link, "_blank")}
-                className="ond-bg-gradient hover:scale-110 text-white w-10 h-10 rounded-full flex justify-center items-center cursor-pointer shadow-lg transition-transform duration-300"
+                className="ond-bg-gradient text-white w-10 h-10 rounded-full flex justify-center items-center cursor-pointer shadow-lg transition-transform duration-300 glow-animation"
                 title={isArabic ? "عرض الكود" : "View Code"}
               >
                 <svg
@@ -56,32 +66,38 @@ const ProjectCard = ({
                     d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                   />
                 </svg>
-              </div>
+              </motion.div>
             </div>
           )}
         </div>
 
         <div className="mt-5">
-          <h3
+          <motion.h3
+            whileHover={{ scale: 1.02 }}
             className={`text-white font-bold text-[22px] ${
               isArabic ? "font-tajawal text-right" : "font-preah text-left"
             }`}
           >
             {name}
-          </h3>
-          <p
+          </motion.h3>
+          <motion.p
+            whileHover={{ scale: 1.01 }}
             className={`mt-2 text-gray-200 text-[15px] leading-relaxed ${
               isArabic ? "font-tajawal text-right" : "font-malgun text-left"
             }`}
           >
             {description}
-          </p>
+          </motion.p>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <span
+          {tags.map((tag, tagIndex) => (
+            <motion.span
               key={`${name}-${tag.name}`}
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: tagIndex * 0.1 }}
+              whileHover={{ scale: 1.1, rotate: 5 }}
               className={`px-3 py-1 rounded-full text-xs font-medium ${
                 isArabic ? "font-tajawal" : "font-preah"
               } ${
@@ -93,7 +109,7 @@ const ProjectCard = ({
               }`}
             >
               {tag.name}
-            </span>
+            </motion.span>
           ))}
         </div>
       </Tilt>

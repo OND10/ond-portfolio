@@ -10,32 +10,48 @@ import { useTranslation } from "react-i18next";
 const ExperienceCard = ({ experience, index, isArabic }) => (
   <motion.div
     variants={fadeIn("up", "tween", index * 0.15, 0.4)}
-    whileHover={{ scale: 1.03, boxShadow: "0px 15px 30px rgba(0,0,0,0.15)" }}
+    whileHover={{ 
+      scale: 1.05, 
+      rotateY: 5,
+      boxShadow: "0px 20px 40px rgba(102, 126, 234, 0.3)" 
+    }}
+    whileTap={{ scale: 0.95 }}
     transition={{ type: "tween", duration: 0.3 }}
     className="glass-card hover-lift p-6 shadow-lg transition-transform group"
   >
     <div className="flex items-center gap-4 mb-4">
-      <div className="flex justify-center items-center w-20 h-20 rounded-full ond-bg-gradient p-3 group-hover:scale-110 transition-transform duration-300">
+      <motion.div 
+        whileHover={{ rotate: 360, scale: 1.2 }}
+        transition={{ duration: 0.6 }}
+        className="flex justify-center items-center w-20 h-20 rounded-full ond-bg-gradient p-3 group-hover:scale-110 transition-transform duration-300 glow-animation"
+      >
         <img
           src={experience.icon}
           alt={experience.company_name}
           className="w-full h-full object-contain filter brightness-0 invert"
         />
-      </div>
+      </motion.div>
       <div className="flex-1">
-        <h3
+        <motion.h3
+          whileHover={{ scale: 1.02 }}
           className={`text-xl font-semibold text-white ${
             isArabic ? "font-tajawal" : "font-malgun"
           }`}
         >
           {experience.title}
-        </h3>
-        <p className="text-sm ond-gradient font-medium">
+        </motion.h3>
+        <motion.p 
+          whileHover={{ scale: 1.05 }}
+          className="text-sm ond-gradient font-medium"
+        >
           {experience.company_name}
-        </p>
-        <p className="text-xs text-gray-300 mt-1">
+        </motion.p>
+        <motion.p 
+          whileHover={{ scale: 1.05 }}
+          className="text-xs text-gray-300 mt-1"
+        >
           {experience.date}
-        </p>
+        </motion.p>
       </div>
     </div>
     <ul
@@ -44,12 +60,18 @@ const ExperienceCard = ({ experience, index, isArabic }) => (
       }`}
     >
       {experience.points.map((point, i) => (
-        <li
+        <motion.li
           key={i}
+          whileHover={{ 
+            scale: 1.02, 
+            x: isArabic ? -10 : 10,
+            color: "#ffffff"
+          }}
+          transition={{ duration: 0.2 }}
           className="hover:text-white transition-colors duration-300"
         >
           {point}
-        </li>
+        </motion.li>
       ))}
     </ul>
   </motion.div>

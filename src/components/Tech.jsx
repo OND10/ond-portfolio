@@ -40,27 +40,34 @@ const Tech = () => {
         {technologies.map((tech, index) => (
           <motion.div
             key={tech.name}
-            className="glass-card hover-lift w-24 h-24 flex items-center justify-center group"
-            whileHover={{ scale: 1.1, rotate: 5 }}
+            className="glass-card hover-lift w-24 h-24 flex items-center justify-center group glow-animation"
+            whileHover={{ 
+              scale: 1.2, 
+              rotate: 360,
+              boxShadow: "0 0 30px rgba(102, 126, 234, 0.5)"
+            }}
+            whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
+            initial={{ opacity: 0, y: 50, rotate: -180 }}
+            animate={{ opacity: 1, y: 0, rotate: 0 }}
+            transition={{ delay: index * 0.1, duration: 0.8 }}
           >
             {tech.icon ? (
-              <img
+              <motion.img
+                whileHover={{ scale: 1.3, rotate: 10 }}
                 src={tech.icon}
                 alt={tech.name}
                 className="w-16 h-16 object-contain group-hover:scale-110 transition-transform duration-300"
               />
             ) : (
-              <span
+              <motion.span
+                whileHover={{ scale: 1.2, rotate: 5 }}
                 className={`text-sm text-white font-bold ${
                   isArabic ? "font-tajawal" : "font-malgun"
                 }`}
               >
                 {tech.name}
-              </span>
+              </motion.span>
             )}
           </motion.div>
         ))}
