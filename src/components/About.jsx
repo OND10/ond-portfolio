@@ -11,13 +11,14 @@ const ServiceCard = ({ index, title, icon, isArabic }) => (
   <Tilt className="w-full sm:w-[250px]">
     <motion.div
       variants={fadeIn("right", "spring", index * 0.3, 0.75)}
-      className="bg-white/10 dark:bg-white/10 border border-violet-500 dark:border-violet-500
-                 backdrop-blur-md rounded-xl p-4 shadow-md hover:shadow-lg transition-all duration-300 "
+      className="glass-card hover-lift p-6 shadow-lg transition-all duration-300 group"
     >
-      <div className="flex flex-col items-center text-center gap-4 ">
-        <img src={icon} alt={title} className="w-20 h-20 object-contain " />
+      <div className="flex flex-col items-center text-center gap-4">
+        <div className="w-20 h-20 rounded-full ond-bg-gradient p-4 group-hover:scale-110 transition-transform duration-300">
+          <img src={icon} alt={title} className="w-full h-full object-contain filter brightness-0 invert" />
+        </div>
         <h3
-          className={`text-black dark:text-gray-200 text-[16px] font-semibold ${
+          className={`text-white text-[16px] font-semibold ${
             isArabic
               ? "font-tajawal text-center sm:text-right"
               : "font-preah text-center sm:text-left"
@@ -75,7 +76,7 @@ const About = () => {
         >
           {aboutText.ftitle}
           <span
-            className={`text-violet-500 ${
+            className={`ond-gradient ${
               isArabic
                 ? "font-tajawal text-center sm:text-right"
                 : "font-preah text-center sm:text-left"
@@ -89,9 +90,8 @@ const About = () => {
 
       <motion.div
         variants={fadeIn("", "", 0.1, 1)}
-        className={`bg-white/10 dark:bg-white/10 border border-violet-700 dark:border-violet-700 
-    rounded-xl p-8 max-w-6xl min-h-[220px] text-[18px] text-gray-800 dark:text-gray-200 
-    leading-[32px] shadow-md backdrop-blur-md text-center sm:text-start`}
+        className={`glass-card hover-lift p-8 max-w-6xl min-h-[220px] text-[18px] text-white 
+    leading-[32px] shadow-lg text-center sm:text-start`}
       >
         <div
           className={`${

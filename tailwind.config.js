@@ -30,6 +30,12 @@ export default  {
         "black-100": "#100d25",
         "black-200": "#090325",
         "white-100": "#f3f3f3",
+        "ond-primary": "#667eea",
+        "ond-secondary": "#764ba2",
+        "ond-accent": "#4ecdc4",
+        "ond-highlight": "#ff6b6b",
+        "glass": "rgba(255, 255, 255, 0.05)",
+        "glass-border": "rgba(255, 255, 255, 0.1)",
       },
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",
