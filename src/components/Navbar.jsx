@@ -95,7 +95,7 @@ const Navbar = () => {
                   active === nav.title
                     ? "ond-gradient font-semibold"
                     : ""
-                } text-sm sm:text-base text-gray-300 cursor-pointer transition-all duration-300 ease-in-out hover:text-white hover:scale-105 hover:drop-shadow-md mb-1`}
+                } text-sm sm:text-base text-text-secondary cursor-pointer transition-all duration-300 ease-in-out hover:text-text-primary hover:scale-105 hover:drop-shadow-md mb-1`}
                 onClick={() => setActive(nav.title)}
               >
                 <a
@@ -116,7 +116,7 @@ const Navbar = () => {
           {/* Language Toggle */}
           <button
             onClick={() => setLang(lang === "en" ? "ar" : "en")}
-            className="text-white hover:text-gray-300 transition-all duration-300 ease-in-out hover:scale-110 hover:drop-shadow-md active:animate-ping"
+            className="text-text-primary hover:text-text-secondary transition-all duration-300 ease-in-out hover:scale-110 hover:drop-shadow-md active:animate-ping"
             aria-label="Toggle Language"
           >
             {lang === "en" ? "AR" : "EN"}
@@ -125,7 +125,7 @@ const Navbar = () => {
           {/* Dark Mode Toggle */}
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className="text-white hover:text-gray-300 transition-all duration-300 ease-in-out hover:scale-110 hover:drop-shadow-md active:animate-spin"
+            className="text-text-primary hover:text-text-secondary transition-all duration-300 ease-in-out hover:scale-110 hover:drop-shadow-md active:animate-spin"
             aria-label="Toggle Dark Mode"
           >
             {darkMode ? (
@@ -139,7 +139,7 @@ const Navbar = () => {
           <div className="sm:hidden flex justify-end items-center relative">
             <button
               onClick={() => setToggle(!toggle)}
-              className="text-white focus:outline-none"
+              className="text-text-primary focus:outline-none"
               aria-label="Toggle Menu"
             >
               <img
@@ -168,7 +168,7 @@ const Navbar = () => {
                   <button
                     onClick={() => setToggle(false)}
                     aria-label="Close Menu"
-                    className="absolute top-4 right-4 text-white text-2xl font-bold hover:text-gray-300 transition"
+                    className="absolute top-4 right-4 text-text-primary text-2xl font-bold hover:text-text-secondary transition"
                   >
                     ×
                   </button>
@@ -184,7 +184,7 @@ const Navbar = () => {
                         className={`text-base font-semibold px-6 py-3 rounded-xl transition-all duration-300 ${
                           active === nav.title
                             ? "ond-bg-gradient text-white shadow-lg"
-                            : "text-white hover:bg-white/10 hover:text-gray-200"
+                            : "text-text-primary hover:bg-white/10 hover:text-text-secondary"
                         } cursor-pointer select-none`}
                       >
                         <a

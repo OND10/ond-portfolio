@@ -17,7 +17,7 @@ const Tech = () => {
     <section
       className={`w-full py-20 px-0 overflow-hidden ${
         isArabic ? "text-right" : "text-left"
-      } bg-gradient-to-b from-[#0a0a0a] to-[#1a1a2e]`}
+      } bg-gradient-to-b from-bg-primary to-bg-secondary`}
     >
       <div className="text-center mb-12 px-4 ">
         <h2
@@ -28,7 +28,7 @@ const Tech = () => {
           {title}
         </h2>
         <p
-          className={`mt-4 text-gray-300 text-lg ${
+          className={`mt-4 text-text-secondary text-lg ${
             isArabic ? "font-tajawal" : "font-preah"
           }`}
         >
@@ -62,7 +62,7 @@ const Tech = () => {
             ) : (
               <motion.span
                 whileHover={{ scale: 1.2, rotate: 5 }}
-                className={`text-sm text-white font-bold ${
+                className={`text-sm text-text-primary font-bold ${
                   isArabic ? "font-tajawal" : "font-malgun"
                 }`}
               >

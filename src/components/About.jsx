@@ -30,7 +30,7 @@ const ServiceCard = ({ index, title, icon, isArabic }) => (
         </motion.div>
         <motion.h3
           whileHover={{ scale: 1.05 }}
-          className={`text-white text-[16px] font-semibold ${
+          className={`text-text-primary text-[16px] font-semibold ${
             isArabic
               ? "font-tajawal text-center sm:text-right"
               : "font-preah text-center sm:text-left"
@@ -102,7 +102,7 @@ const About = () => {
 
       <motion.div
         variants={fadeIn("", "", 0.1, 1)}
-        className={`glass-card hover-lift p-8 max-w-6xl min-h-[220px] text-[18px] text-white 
+        className={`glass-card hover-lift p-8 max-w-6xl min-h-[220px] text-[18px] text-text-primary 
     leading-[32px] shadow-lg text-center sm:text-start`}
       >
         <div

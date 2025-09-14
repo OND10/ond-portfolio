@@ -74,7 +74,7 @@ const ProjectCard = ({
         <div className="mt-5">
           <motion.h3
             whileHover={{ scale: 1.02 }}
-            className={`text-white font-bold text-[22px] ${
+            className={`text-text-primary font-bold text-[22px] ${
               isArabic ? "font-tajawal text-right" : "font-preah text-left"
             }`}
           >
@@ -82,7 +82,7 @@ const ProjectCard = ({
           </motion.h3>
           <motion.p
             whileHover={{ scale: 1.01 }}
-            className={`mt-2 text-gray-200 text-[15px] leading-relaxed ${
+            className={`mt-2 text-text-secondary text-[15px] leading-relaxed ${
               isArabic ? "font-tajawal text-right" : "font-malgun text-left"
             }`}
           >
