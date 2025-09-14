@@ -17,18 +17,18 @@ const Tech = () => {
     <section
       className={`w-full py-20 px-0 overflow-hidden ${
         isArabic ? "text-right" : "text-left"
-      } bg-gradient-to-b from-[#f4f4f8] to-[#eaeaf0] dark:from-[#1a103d] dark:to-[#12092b]`}
+      } bg-gradient-to-b from-[#0a0a0a] to-[#1a1a2e]`}
     >
       <div className="text-center mb-12 px-4 ">
         <h2
-          className={`text-4xl font-bold text-violet-500 dark:text-white  ${
+          className={`text-4xl font-bold ond-gradient ${
             isArabic ? "font-tajawal" : "font-preah"
           }`}
         >
           {title}
         </h2>
         <p
-          className={`mt-4 text-gray-800 dark:text-gray-300 text-lg ${
+          className={`mt-4 text-gray-300 text-lg ${
             isArabic ? "font-tajawal" : "font-preah"
           }`}
         >
@@ -36,23 +36,26 @@ const Tech = () => {
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-6 px-8  ">
-        {technologies.map((tech) => (
+      <div className="flex flex-wrap justify-center gap-6 px-8">
+        {technologies.map((tech, index) => (
           <motion.div
             key={tech.name}
-            className="w-24 h-24 flex items-center justify-center backdrop-blur-md bg-white/60 dark:bg-white/10 border-2 border-violet-500 dark:border-violet-400 rounded-xl shadow-md dark:shadow-lg"
-            whileHover={{ scale: 1.1 }}
+            className="glass-card hover-lift w-24 h-24 flex items-center justify-center group"
+            whileHover={{ scale: 1.1, rotate: 5 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
           >
             {tech.icon ? (
               <img
                 src={tech.icon}
                 alt={tech.name}
-                className="w-16 h-16 object-contain"
+                className="w-16 h-16 object-contain group-hover:scale-110 transition-transform duration-300"
               />
             ) : (
               <span
-                className={`text-sm text-gray-700 dark:text-white ${
+                className={`text-sm text-white font-bold ${
                   isArabic ? "font-tajawal" : "font-malgun"
                 }`}
               >

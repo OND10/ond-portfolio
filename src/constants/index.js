@@ -30,19 +30,19 @@ export const getHeroText = (lang) => {
   return lang === "ar"
     ? {
         hello: "مرحبًا، أنا",
-        name: "حسن",
-        name2: "فؤاد",
+        name: "أسامة",
+        name2: "دماج",
         passion:
-          "مطور تقني أبني حلول ذكية تجمع التقنية، التصميم، والذكاء الاصطناعي، وأحوّل الأفكار إلى واقع رقمي يواكب المستقبل.",
+          "مطور Backend متخصص في .NET و React، أبني حلول قابلة للتوسع باستخدام Clean Architecture و CQRS. أحول الأفكار المعقدة إلى أنظمة فعالة وموثوقة.",
         contact: "تواصل معي",
         download: "تحميل السيرة الذاتية",
       }
     : {
         hello: "Hello, I'm",
-        name: "Hasan",
-        name2: "Fuaad",
+        name: "Osama",
+        name2: "Dammag",
         passion:
-          "Tech developer creating smart solutions that blend technology, design, and AI, turning ideas into digital realities that shape the future.",
+          "Backend Developer specializing in .NET and React, building scalable solutions using Clean Architecture and CQRS. Transforming complex ideas into efficient and reliable systems.",
         contact: "Contact Me",
         download: "Download CV",
       };
@@ -81,40 +81,37 @@ export const getAboutText = (lang) => {
   return {
     subtitle: lang === "ar" ? "نبذة عني" : "About Me",
     ftitle: lang === "ar" ? "من هو" : "Who is ",
-    stitle: lang === "ar" ? "حسن ؟" : "Hasan ?",
+    stitle: lang === "ar" ? "أسامة ؟" : "Osama ?",
     description:
       lang === "ar"
-        ? `مرحبًا، أنا <span class="text-violet-500 font-tajawal font-bold">حسن فؤاد</span> أخصائي تكنولوجيا معلومات ومطور بخبرة قوية في تطوير الواجهات الخلفية واختبار التكامل وصناعة المحتوى.
-عملت مع مجموعة متنوعة من العملاء، من شركات كبرى إلى فرق صغيرة، لمساعدتهم على بناء أنظمة فعالة تخدم المستخدمين بشكل أفضل.
+        ? `مرحبًا، أنا <span class="text-violet-500 font-tajawal font-bold">أسامة دماج</span> مطور Backend مبتدئ مع خبرة سنتين في .NET و React. متخصص في بناء أنظمة قابلة للتوسع باستخدام Clean Architecture و CQRS.
 
-بعيدًا عن البرمجة، نظّمت وساهمت في العديد من الفعاليات المتعلقة بالأعمال وتكنولوجيا المعلومات والذكاء الاصطناعي، لمساعدة الفرق على مواكبة التطورات التقنية المتسارعة.
+عملت في شركات مختلفة من Visual Soft إلى Tharawat للخدمات المالية، حيث ساهمت في تحسين أداء الأنظمة بنسبة 40% وتقليل أوقات الاستجابة بنسبة 35% من خلال تطبيق أفضل الممارسات في البرمجة.
 
-أنا شغوف بالتقنيات الناشئة، خاصة الذكاء الاصطناعي، وأستمتع ببناء حلول واقعية قابلة للتوسع تُحدث فرقًا حقيقيًا. دعنا نبتكر معًا.`
-        : `Hi, I'm <span class="text-violet-500 font-malgun font-bold">Hasan Fuaad</span> an IT Specialist and Developer with a solid background in backend development, integration testing, and content creation.
-I’ve worked with a wide range of clients, from major companies to small teams, helping them build and optimize their systems to better serve their users.
+أنا شغوف بتطوير حلول مبتكرة باستخدام أحدث التقنيات، وأستمتع بتحويل الأفكار المعقدة إلى أنظمة فعالة وموثوقة. دعنا نبتكر معًا.`
+        : `Hi, I'm <span class="text-violet-500 font-malgun font-bold">Osama Dammag</span> a junior backend developer with 2 years of hands-on experience using .NET and React. I specialize in building scalable systems using Clean Architecture and CQRS.
 
-Beyond development, I’ve organized and contributed to many events focused on Business, Information Technology, and Artificial Intelligence, helping professionals and teams stay ahead in an ever-evolving tech landscape.
+I've worked with various companies from Visual Soft to Tharawat for Financial Services, where I contributed to improving system performance by 40% and reducing response times by 35% through implementing best programming practices.
 
-I’m passionate about emerging technologies, especially AI, and I enjoy building scalable, real-world solutions that make a difference. Let’s innovate together.`,
+I'm passionate about developing innovative solutions using cutting-edge technologies, and I enjoy transforming complex ideas into efficient and reliable systems. Let's innovate together.`,
   };
 };
 
 export const getServices = (lang) => [
   {
-    title: lang === "ar" ? "مطور الواجهة الخلفية" : "Backend Developer",
+    title: lang === "ar" ? "مطور .NET" : ".NET Developer",
     icon: backendIcon,
   },
   {
-    title:
-      lang === "ar" ? "مهندس اختبار التكامل " : "Integration Test Engineer",
+    title: lang === "ar" ? "مطور React" : "React Developer",
     icon: integrationIcon,
   },
   {
-    title: lang === "ar" ? "مستشار تقني" : "Tech Consultant",
-    icon: consultant  ,
+    title: lang === "ar" ? "مهندس معماري" : "Software Architect",
+    icon: consultant,
   },
   {
-    title: lang === "ar" ? "صانع محتوى" : "Content Creator",
+    title: lang === "ar" ? "مطور API" : "API Developer",
     icon: contentIcon,
   },
 ];
@@ -140,67 +137,60 @@ export const getExperiences = (lang) => [
   {
     subtitle: lang === "ar" ? "ما فعلته حتى الآن " : "What I have done so far",
     ftitle: lang === "ar" ? "الخبرات العملية" : "Work Experience",
-    title:
-      lang === "ar" ? "مطور ومختبر برمجيات" : "Developer & Software Tester",
-    company_name:
-      lang === "ar"
-        ? "شركة RTS، مجموعة ثروات للخدمات المالية والاستثمار"
-        : "RTS Company, Tharwat for Financial Services & Investment Group",
-    icon: rts,
-    iconBg: "#383E56",
+    title: lang === "ar" ? "مهندس برمجيات" : "Software Engineer",
+    company_name: lang === "ar" ? "مؤسسة تبسرة" : "Tabsera Foundation",
+    icon: gdsc,
+    iconBg: "#E6DEDD",
     date: lang === "ar" ? "2024 - الآن" : "2024 - now",
     points:
       lang === "ar"
         ? [
-            "أجريت اختبارات تكامل دقيقة على واجهات برمجة التطبيقات (APIs)، مما ساعد في تحديد المشكلات وحلها لضمان أداء قوي وموثوقية عالية.",
-            "طورت واجهات برمجة التطبيقات باستخدام ASP.NET، وتعاونت مع الفرق متعددة التخصصات لتحسين الأداء العام للنظام باستخدام Azure DevOps.",
-            "صممت ونفذت واجهات المستخدم باستخدام Flutter، مما ساهم في تجربة سلسة واستجابة عالية عبر منصات متعددة.",
+            "أظهرت كفاءة استثنائية في تطوير البرمجيات باستخدام أحدث التقنيات.",
+            "طبق RESTful باستخدام Django REST Framework واختبرت APIs باستخدام Swagger و Postman، مما زاد من تغطية الاختبارات إلى 90%.",
+            "بناء تطبيقات ويب منظمة جيدًا باستخدام React.",
           ]
         : [
-            "Conducted rigorous integration testing on system APIs, identifying and resolving issues to ensure robust functionality and performance.",
-            "Developed APIs using ASP.NET, and using Azure DevOps. Collaborated closely with crossfunctional teams to optimize API performance and enhance overall system reliability.",
-            "Designed and implemented user interfaces using Flutter, contributing to a seamless and responsive user experience across multiple platforms.",
+            "Demonstrate exceptional proficiency in software development using the latest technologies.",
+            "Applied RESTful using Django REST framework and tested APIs using Swagger and Postman, increasing test coverage to 90%.",
+            "Build well-structured web applications using React.",
           ],
   },
   {
-    title: lang === "ar" ? "قائد فريق ومُتحدث" : "Team Leader & Speaker",
-    company_name:
-      lang === "ar"
-        ? "نادي مطوري Google - جامعة سبأ"
-        : "Google Developers Student Club - Saba University",
-    icon: gdsc,
-    iconBg: "#E6DEDD",
-    date: lang === "ar" ? "2022 - 2023" : "2022 - 2023",
+    title: lang === "ar" ? "مطور ويب" : "Web Developer",
+    company_name: lang === "ar" ? "Visual Soft" : "Visual Soft",
+    icon: rts,
+    iconBg: "#383E56",
+    date: lang === "ar" ? "06/2024 - 08/2024" : "06/2024 - 08/2024",
     points:
       lang === "ar"
         ? [
-            "تعاونت مع خبراء من دول الشرق الأوسط لتصميم وتنفيذ العديد من الدورات التعليمية محليًا ودوليًا.",
-            "نظّمت سلسلة من الفعاليات والأنشطة التي تركز على أحدث التطورات التقنية، وخلقت منتديات لتبادل المعرفة واستكشاف الاتجاهات الحديثة.",
+            "أشرفت على فصل عمليات القراءة والكتابة من خلال دمج CQRS و Clean Architecture، مما أدى إلى تقليل أوقات استجابة الاستعلامات بنسبة 40% وتحسين إنتاجية النظام بنسبة 35%.",
+            "صممت ونفذت آليات مصادقة قوية قائمة على JWT، مما عزز أمان المنصة ومكن من استراتيجيات تحديث الرموز المميزة.",
+            "استخدمت Git و GitHub لإدارة إصدارات المشروع وتبسيط التعاون الجماعي، مما أدى إلى تقليل تضارب الدمج بنسبة 50%.",
           ]
         : [
-            "Collaborated with experts from diverse Middle Eastern countries to design and implement several educational courses, both locally and internationally.",
-            "Organized a series of events and activities focusing on the forefront of technological advancements, creating forums for knowledge exchange and exploration of the latest trends.",
+            "Orchestrated the decoupling of read and write operations by integrating CQRS and Clean Architecture, leading to a 40% reduction in query response times and improved system throughput by 35%.",
+            "Designed and implemented robust JWT-based authentication mechanisms, enhancing platform security and enabling token refresh strategies.",
+            "Utilized Git and GitHub to manage project versions and streamline team collaboration, leading to a 50% reduction in merge conflicts.",
           ],
   },
   {
-    title:
-      lang === "ar"
-        ? "متدرب تقنية معلومات وإداري"
-        : "IT Intern & Administration",
-    company_name:
-      lang === "ar"
-        ? "المركز اليمني لتقنية المعلومات في التعليم العالي"
-        : "Yemen Center Information Technology in Higher Education",
+    title: lang === "ar" ? "مطور .NET" : ".NET Developer",
+    company_name: lang === "ar" ? "ثروات للخدمات المالية والاستثمار" : "Tharawat for Financial Services & Investment",
     icon: ycit,
     iconBg: "#383E56",
-    date: lang === "ar" ? "2020 - 2023" : "2020 - 2023",
+    date: lang === "ar" ? "09/2023 - 02/2024" : "09/2023 - 02/2024",
     points:
       lang === "ar"
         ? [
-            "أثناء فترة تدريبي في مركز تقنية المعلومات بالتعليم العالي، طورت مهاراتي الإدارية والبرمجية، وشاركت في مشاريع متعددة مما أظهر قدرتي على التكيف والمساهمة بفعالية.",
+            "أشرفت على إطار عمل .NET Web API معياري يتبع مبادئ Clean Architecture، مما أدى إلى تقليل تكرار الكود بنسبة 40% وزيادة سرعة استجابة التصحيح بنسبة 25%.",
+            "طبق مبادئ RESTful و GraphQL واختبرت APIs باستخدام Swagger و Postman، مما زاد من تغطية الاختبارات إلى 90%.",
+            "استخدمت مبادئ SOLID ونفذت أنماط التصميم لتعزيز قابلية صيانة الكود وتقليل إعادة الهيكلة بنسبة 35%.",
           ]
         : [
-            "During my stint as a trainee at the Information Technology Center in Higher Education, I fine-tuned both administrative and programming skills. This hands-on experience allowed me to actively participate in various projects across different business areas, showcasing adaptability and contributing meaningfully to each endeavor.",
+            "Orchestrated a modular .NET Web API framework adhering to Clean Architecture principles, resulting in a 40% decrease in code duplication and a 25% faster debugging response time.",
+            "Applied RESTful and GraphQL principles and tested APIs using Swagger and Postman, increasing test coverage to 90%.",
+            "Used SOLID principles and implemented design patterns to boost code maintainability and reduce refactoring by 35%.",
           ],
   },
 ];
@@ -208,144 +198,149 @@ export const getExperiences = (lang) => [
 
 export const getProjects = (lang) => [
   {
-    name: lang === "ar" ? "سمارت بنك" : "Smart Bank",
+    name: lang === "ar" ? "نظام إدارة التعلم" : "Learning Management System",
     description:
       lang === "ar"
-        ? "سمارت بنك هو تطبيق بلغة C# يُبسط العمليات المصرفية، ويُمكن من إدارة الحسابات بكفاءة وإجراء المعاملات المالية بسهولة."
-        : "Smart Bank is a C# application that simplifies banking operations, enabling efficient account management and seamless financial transactions.",
+        ? "منصة LMS كاملة المكدس لجامعة صنعاء. Backend: Laravel مع Clean Code و Service/Repository pattern. Frontend: React مع Vite و TanStack Router. ميزات: إدارة الطلاب، المدرسين، الخطط الدراسية، التقييمات والمتابعة."
+        : "Full-stack LMS platform for Sana'a University. Backend: Laravel with Clean Code, Service/Repository pattern, Sanctum authentication. Frontend: React with Vite, TanStack Router, and ShadCN UI. Features: Student management, instructors, study plans, grading, and tracking.",
     tags: [
       {
-        name: "SmartBank",
+        name: "LMS",
         color: "blue-text-gradient",
       },
       {
-        name: lang === "ar" ? "سي شارب" : "Csharp",
+        name: "Laravel",
         color: "green-text-gradient",
       },
       {
-        name: lang === "ar" ? "البرمجة الكائنية" : "OOP",
+        name: "React",
         color: "pink-text-gradient",
       },
     ],
     image: p1,
-    source_code_link: "https://github.com/hasanfuaad/SmartBank-opp",
+    source_code_link: "https://github.com/osamadammag",
   },
   {
-    name: lang === "ar" ? "نظام المستشفى" : "Hospital",
+    name: lang === "ar" ? "تطبيق التجارة الإلكترونية" : "E-commerce App",
     description:
       lang === "ar"
-        ? "نظام المستشفى هو تطبيق بسيط بلغة C# يُساعد على تسهيل العمليات داخل المستشفيات من خلال إدارة سجلات المرضى والمواعيد والموظفين بكفاءة."
-        : "Hospital System is a small C# application designed to streamline hospital operations, managing patient records, appointments, and staff efficiently.",
+        ? "منصة تجارة إلكترونية باستخدام .NET MVC. ميزات: قوائم المنتجات، سلة التسوق، عملية الدفع، وتوليد رموز QR ديناميكية لكل منتج. تطبيق معمارية MVC وضمان تكامل Backend/Frontend."
+        : "E-commerce platform using .NET MVC. Features: Product listings, shopping cart, checkout workflow, and dynamic QR code generation for each product. Applied MVC architecture and ensured backend/frontend integration.",
     tags: [
       {
-        name: "Hospital",
+        name: "E-commerce",
         color: "blue-text-gradient",
       },
       {
-        name: lang === "ar" ? "سي شارب" : "Csharp",
+        name: ".NET MVC",
         color: "green-text-gradient",
+      },
+      {
+        name: "C#",
+        color: "pink-text-gradient",
       },
     ],
     image: p2,
-    source_code_link: "https://github.com/hasanfuaad/Hospital-System",
+    source_code_link: "https://github.com/osamadammag",
   },
   {
-    name: lang === "ar" ? "شركة eBusiness" : "eBusiness Company",
+    name: lang === "ar" ? "تطبيق مالابي" : "Malabi App",
     description:
       lang === "ar"
-        ? "موقع شركة eBusiness تم بناؤه باستخدام قالب مجاني مع HTML وCSS وJavaScript، لتوفير حضور إلكتروني فعال وجذاب بصريًا."
-        : "eBusiness is a company website built using a free template, leveraging HTML, CSS and JavaScript, to create a functional and visually appealing online presence.",
+        ? "تطبيق Flutter للهواتف المحمولة لحجز الملاعب الرياضية الخاصة والعامة. استخدام GetX لإدارة الحالة ومعمارية MVC للفصل النظيف. Backend: .NET 8 مع Clean Architecture يعرض نقاط نهاية آمنة وقابلة للتوسع."
+        : "Flutter-based mobile app for booking private/public sports stadiums. Used GetX for state management and MVC architecture for clean separation. Backend: .NET 8 with Clean Architecture exposing secure, scalable endpoints.",
     tags: [
       {
-        name: "eBusiness",
+        name: "Flutter",
         color: "blue-text-gradient",
       },
       {
-        name: lang === "ar" ? "HTML" : "HTML",
+        name: ".NET 8",
         color: "green-text-gradient",
       },
       {
-        name: lang === "ar" ? "CSS" : "CSS",
+        name: "GetX",
         color: "pink-text-gradient",
       },
     ],
     image: p3,
-    source_code_link: "https://github.com/hasanfuaad/eBusiness-Company-Website",
+    source_code_link: "https://github.com/osamadammag",
   },
 ];
 
 
 const technologies = [
   {
-    name: "CSHARP",
+    name: "C#",
     icon: csharp,
   },
   {
-    name: "DOTNETCORE",
+    name: ".NET Core",
     icon: dotnetcore,
   },
   {
-    name: "PLAYWRIGHT",
-    icon: playwright,
+    name: ".NET 8",
+    icon: dotnetcore,
   },
   {
-    name: "DART",
-    icon: dart,
-  },
-  {
-    name: "FLUTTER",
-    icon: flutter,
-  },
-
-  {
-    name: "JavaScript",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-  },
-
-  {
-    name: "React JS",
+    name: "React",
     icon: reactjs,
   },
-
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
+    name: "Entity Framework",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg",
   },
   {
-    name: "Node JS",
-    icon: nodejs,
+    name: "SQL Server",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "JWT",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
   },
   {
-    name: "git",
+    name: "REST API",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  },
+  {
+    name: "GraphQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
+  },
+  {
+    name: "Clean Architecture",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/architecture/architecture-original.svg",
+  },
+  {
+    name: "CQRS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
+  },
+  {
+    name: "Microservices",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  },
+  {
+    name: "Git",
     icon: git,
   },
   {
-    name: "Python",
-    icon: python,
+    name: "GitHub",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+  },
+  {
+    name: "Swagger",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg",
   },
   {
     name: "Postman",
     icon: postman,
   },
   {
-    name: "figma",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-  },
-  {
-    name: "adobexd",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xd/xd-original.svg",    
-  },
-  {
-    name: "github",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-  },
-  {
-    name: "azuredevops",
+    name: "Azure DevOps",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuredevops/azuredevops-original.svg",
+  },
+  {
+    name: "XUnit",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
   },
 ];
 
@@ -361,15 +356,14 @@ export const getTestimonials = (lang) => Array.from({ length: 8 }, () => ({
 
 export const getFooter = (lang) => {
   return {
-    title: lang === "ar" ? "حسن فؤاد | ملف الأعمال" : "Hasan Fuaad | Portfolio",
+    title: lang === "ar" ? "أسامة دماج | ملف الأعمال" : "Osama Dammag | Portfolio",
     description:
-      lang === "ar" ? "© 2025 كل الحقوق محفوظة ل حسن فؤاد" : "© 2025 All rights reserved to Hasan Fuaad",
+      lang === "ar" ? "© 2025 كل الحقوق محفوظة ل أسامة دماج" : "© 2025 All rights reserved to Osama Dammag",
     socialLinks: [
-      { icon: "FaGithub", link: "https://github.com/hasanfuaad" },
-      { icon: "FaYoutube", link: "https://www.youtube.com/@hasanfuaad" },
-      { icon: "FaLinkedin", link: "https://www.linkedin.com/in/hasan-fuaad-3591a918b/" },
-      { icon: "FaFacebook", link: "https://www.facebook.com/hasan.fuaad.7/" },
-      { icon: "FaInstagram", link: "https://www.instagram.com/hasan_fuaad/#" },
+      { icon: "FaGithub", link: "https://github.com/osamadammag" },
+      { icon: "FaLinkedin", link: "https://www.linkedin.com/in/osama-dammag/" },
+      { icon: "FaTwitter", link: "https://twitter.com/osamadammag" },
+      { icon: "FaEnvelope", link: "mailto:osama.dammag@gmail.com" },
     ],
   };
 };

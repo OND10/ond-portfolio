@@ -51,7 +51,7 @@ const Hero = () => {
         >
           {heroText.name}
           <span
-            className={`text-violet-500 ${
+            className={`ond-gradient ${
               isArabic ? "font-tajawal" : "font-preah"
             }`}
           >
@@ -74,7 +74,7 @@ const Hero = () => {
         <div className="mt-2 flex flex-col md:flex-row justify-center md:justify-start gap-3">
           <a href="#contact">
             <button
-              className={`flex items-center justify-center gap-2 w-56 px-6 py-3 bg-violet-600 hover:bg-violet-700 text-white rounded-full shadow-lg transition duration-300 ${
+              className={`modern-btn flex items-center justify-center gap-2 w-56 px-6 py-3 hover-lift ${
                 isArabic ? "font-tajawal text-right" : "font-preah text-left"
               }`}
             >
@@ -84,9 +84,9 @@ const Hero = () => {
           </a>
           <a
             href={CV}
-            download={"HasanFuaad_CV"}
+            download={"OsamaDammag_CV"}
             target="_blank"
-            className={`flex items-center justify-center gap-2 w-56 px-6 py-3 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-full shadow-lg transition duration-300 cursor-pointer ${
+            className={`flex items-center justify-center gap-2 w-56 px-6 py-3 glass-card hover-lift text-white rounded-full shadow-lg transition duration-300 cursor-pointer ${
               isArabic ? "font-tajawal text-right" : "font-preah text-left"
             }`}
           >
@@ -109,7 +109,7 @@ const Hero = () => {
           }
         >
           <div
-            className="absolute top-8 w-full h-full rounded-full bg-gradient-to-br from-violet-500 via-purple-500 to-violet-500 opacity-35 blur-2xl"
+            className="absolute top-8 w-full h-full rounded-full ond-bg-gradient opacity-35 blur-2xl float-animation"
             style={
               isDesktop
                 ? {
@@ -120,7 +120,7 @@ const Hero = () => {
             }
           />
           <div
-            className="absolute top-[7.5rem] w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] rounded-full bg-white opacity-60 blur-xl"
+            className="absolute top-[7.5rem] w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] rounded-full bg-white opacity-60 blur-xl pulse-glow"
             style={
               isDesktop
                 ? {
@@ -132,8 +132,8 @@ const Hero = () => {
           />
           <img
             src={myPhoto}
-            alt="My Photo"
-            className="z-10 w-[280px] h-[280px] lg:w-[320px] lg:h-[320px] object-contain object-center rounded-full border-2 border-white shadow-xl relative top-8"
+            alt="Osama Dammag"
+            className="z-10 w-[280px] h-[280px] lg:w-[320px] lg:h-[320px] object-contain object-center rounded-full border-4 border-white shadow-2xl relative top-8 hover-lift neon-glow"
             style={
               isDesktop
                 ? {
@@ -149,7 +149,7 @@ const Hero = () => {
       {/* ⬇️ Scroll Down Indicator */}
       <div className="hidden sm:flex absolute bottom-10 right-1 w-full justify-center items-center z-10">
         <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-violet-500 flex justify-center items-start p-2">
+          <div className="w-[35px] h-[64px] rounded-3xl border-4 ond-gradient flex justify-center items-start p-2 glass-card">
             <motion.div
               animate={{ y: [0, 24, 0] }}
               transition={{
@@ -157,7 +157,7 @@ const Hero = () => {
                 repeat: Infinity,
                 repeatType: "loop",
               }}
-              className="w-3 h-3 rounded-full bg-violet-900 dark:bg-white mb-1"
+              className="w-3 h-3 rounded-full ond-bg-gradient mb-1"
             />
           </div>
         </a>

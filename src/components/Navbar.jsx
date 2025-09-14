@@ -63,7 +63,7 @@ const Navbar = () => {
         styles.paddingX
       } w-full flex items-center py-5 fixed top-0 z-20 transition-colors duration-300 ${
         scrolled
-          ? "bg-white/90 dark:bg-black/90 backdrop-blur-md shadow-md"
+          ? "enhanced-glass shadow-lg"
           : "bg-transparent"
       }`}
     >
@@ -77,8 +77,8 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <p className="bg-transparent dark:bg-inherit text-violet-500 dark:text-white text-[26px] font-bold cursor-pointer flex font-mars">
-            HF &nbsp;
+          <p className="ond-logo text-[26px] font-bold cursor-pointer flex font-mars">
+            OND
             <span className="sm:block hidden"></span>
           </p>
         </Link>
@@ -91,9 +91,9 @@ const Navbar = () => {
                 key={nav.id}
                 className={`${
                   active === nav.title
-                    ? "text-violet-700 dark:text-violet-500 font-semibold"
+                    ? "ond-gradient font-semibold"
                     : ""
-                } text-sm sm:text-base text-gray-400 cursor-pointer transition-all duration-300 ease-in-out hover:text-violet-700 hover:scale-105 hover:drop-shadow-md mb-1`}
+                } text-sm sm:text-base text-gray-300 cursor-pointer transition-all duration-300 ease-in-out hover:text-white hover:scale-105 hover:drop-shadow-md mb-1`}
                 onClick={() => setActive(nav.title)}
               >
                 <a
@@ -114,7 +114,7 @@ const Navbar = () => {
           {/* Language Toggle */}
           <button
             onClick={() => setLang(lang === "en" ? "ar" : "en")}
-            className="text-violet-500 dark:text-white hover:text-violet-700 transition-all duration-300 ease-in-out hover:scale-110 hover:drop-shadow-md active:animate-ping"
+            className="text-white hover:text-gray-300 transition-all duration-300 ease-in-out hover:scale-110 hover:drop-shadow-md active:animate-ping"
             aria-label="Toggle Language"
           >
             {lang === "en" ? "AR" : "EN"}
@@ -123,7 +123,7 @@ const Navbar = () => {
           {/* Dark Mode Toggle */}
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className="text-violet-500 dark:text-white hover:text-violet-700 transition-all duration-300 ease-in-out hover:scale-110 hover:drop-shadow-md active:animate-spin"
+            className="text-white hover:text-gray-300 transition-all duration-300 ease-in-out hover:scale-110 hover:drop-shadow-md active:animate-spin"
             aria-label="Toggle Dark Mode"
           >
             {darkMode ? (
@@ -137,7 +137,7 @@ const Navbar = () => {
           <div className="sm:hidden flex justify-end items-center relative">
             <button
               onClick={() => setToggle(!toggle)}
-              className="text-violet-500 dark:text-white focus:outline-none"
+              className="text-white focus:outline-none"
               aria-label="Toggle Menu"
             >
               <img
@@ -157,8 +157,8 @@ const Navbar = () => {
                   onClick={(e) => e.stopPropagation()}
                   className={`
                     relative top-0 left-0 w-full py-6 px-4 
-                    bg-white/80 dark:bg-black/70 backdrop-blur-2xl shadow-2xl z-50
-                    rounded-b-3xl border-b border-violet-200 dark:border-white/10
+                    enhanced-glass shadow-2xl z-50
+                    rounded-b-3xl border-b border-white/10
                     animate-slideDown
                   `}
                   dir={lang === "ar" ? "rtl" : "ltr"}
@@ -166,7 +166,7 @@ const Navbar = () => {
                   <button
                     onClick={() => setToggle(false)}
                     aria-label="Close Menu"
-                    className="absolute top-4 right-4 text-violet-600 dark:text-white text-2xl font-bold hover:text-violet-800 dark:hover:text-violet-300 transition"
+                    className="absolute top-4 right-4 text-white text-2xl font-bold hover:text-gray-300 transition"
                   >
                     ×
                   </button>
@@ -181,8 +181,8 @@ const Navbar = () => {
                         }}
                         className={`text-base font-semibold px-6 py-3 rounded-xl transition-all duration-300 ${
                           active === nav.title
-                            ? "bg-violet-600 text-white shadow-lg"
-                            : "text-violet-700 dark:text-white hover:bg-violet-100 dark:hover:bg-white/10 hover:text-violet-900"
+                            ? "ond-bg-gradient text-white shadow-lg"
+                            : "text-white hover:bg-white/10 hover:text-gray-200"
                         } cursor-pointer select-none`}
                       >
                         <a

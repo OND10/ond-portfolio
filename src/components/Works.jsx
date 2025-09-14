@@ -25,20 +25,21 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className="bg-white/60 dark:bg-white/5 backdrop-blur-lg rounded-2xl p-5 sm:w-[360px] w-full shadow-md transition-all duration-300"
+        className="glass-card hover-lift p-5 sm:w-[360px] w-full shadow-lg transition-all duration-300 group"
       >
-        <div className="relative w-full h-[230px]">
+        <div className="relative w-full h-[230px] overflow-hidden rounded-2xl">
           <img
             src={image}
             alt="project_image"
-            className="w-full h-full object-cover rounded-2xl"
+            className="w-full h-full object-cover rounded-2xl group-hover:scale-110 transition-transform duration-500"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
           {source_code_link && (
             <div className="absolute inset-0 flex justify-end m-3">
               <div
                 onClick={() => window.open(source_code_link, "_blank")}
-                className="bg-violet-600 hover:bg-violet-700 text-white w-10 h-10 rounded-full flex justify-center items-center cursor-pointer shadow"
+                className="ond-bg-gradient hover:scale-110 text-white w-10 h-10 rounded-full flex justify-center items-center cursor-pointer shadow-lg transition-transform duration-300"
                 title={isArabic ? "عرض الكود" : "View Code"}
               >
                 <svg
@@ -52,7 +53,7 @@ const ProjectCard = ({
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M13 16h-1v-4h-1m4-4H8m4-4v16"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                   />
                 </svg>
               </div>
@@ -62,15 +63,15 @@ const ProjectCard = ({
 
         <div className="mt-5">
           <h3
-            className={`text-gray-900 dark:text-white font-bold text-[22px] ${
+            className={`text-white font-bold text-[22px] ${
               isArabic ? "font-tajawal text-right" : "font-preah text-left"
             }`}
           >
             {name}
           </h3>
           <p
-            className={`mt-2 text-gray-600 dark:text-gray-300 text-[15px] leading-relaxed ${
-              isArabic ? "font-tajawal text-right" : "font-malgun  text-left"
+            className={`mt-2 text-gray-200 text-[15px] leading-relaxed ${
+              isArabic ? "font-tajawal text-right" : "font-malgun text-left"
             }`}
           >
             {description}
@@ -79,14 +80,20 @@ const ProjectCard = ({
 
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <p
+            <span
               key={`${name}-${tag.name}`}
-              className={`text-sm ${tag.color} ${
+              className={`px-3 py-1 rounded-full text-xs font-medium ${
                 isArabic ? "font-tajawal" : "font-preah"
+              } ${
+                tag.color === "blue-text-gradient" 
+                  ? "bg-blue-500/20 text-blue-300" 
+                  : tag.color === "green-text-gradient"
+                  ? "bg-green-500/20 text-green-300"
+                  : "bg-pink-500/20 text-pink-300"
               }`}
             >
-              #{tag.name}
-            </p>
+              {tag.name}
+            </span>
           ))}
         </div>
       </Tilt>

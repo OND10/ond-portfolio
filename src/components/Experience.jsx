@@ -12,38 +12,41 @@ const ExperienceCard = ({ experience, index, isArabic }) => (
     variants={fadeIn("up", "tween", index * 0.15, 0.4)}
     whileHover={{ scale: 1.03, boxShadow: "0px 15px 30px rgba(0,0,0,0.15)" }}
     transition={{ type: "tween", duration: 0.3 }}
-    className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/20 rounded-xl p-6 shadow-md dark:shadow-lg transition-transform"
+    className="glass-card hover-lift p-6 shadow-lg transition-transform group"
   >
     <div className="flex items-center gap-4 mb-4">
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center w-20 h-20 rounded-full ond-bg-gradient p-3 group-hover:scale-110 transition-transform duration-300">
         <img
           src={experience.icon}
           alt={experience.company_name}
-          className="w-[100px] h-[100px] object-contain"
+          className="w-full h-full object-contain filter brightness-0 invert"
         />
       </div>
-      <div>
+      <div className="flex-1">
         <h3
-          className={`text-xl font-semibold text-gray-800 dark:text-white ${
+          className={`text-xl font-semibold text-white ${
             isArabic ? "font-tajawal" : "font-malgun"
           }`}
         >
           {experience.title}
         </h3>
-        <p className="text-sm text-violet-600 dark:text-violet-300">
+        <p className="text-sm ond-gradient font-medium">
           {experience.company_name}
+        </p>
+        <p className="text-xs text-gray-300 mt-1">
+          {experience.date}
         </p>
       </div>
     </div>
     <ul
-      className={`list-disc list-inside space-y-2 text-sm text-gray-700 dark:text-gray-200 ${
+      className={`list-disc list-inside space-y-2 text-sm text-gray-200 ${
         isArabic ? "font-tajawal text-right" : "font-malgun text-left"
       }`}
     >
       {experience.points.map((point, i) => (
         <li
           key={i}
-          className="hover:text-violet-700 dark:hover:text-white transition"
+          className="hover:text-white transition-colors duration-300"
         >
           {point}
         </li>
