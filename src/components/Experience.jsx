@@ -34,7 +34,7 @@ const ExperienceCard = ({ experience, index, isArabic }) => (
       <div className="flex-1">
         <motion.h3
           whileHover={{ scale: 1.02 }}
-          className={`text-xl font-semibold text-white ${
+          className={`text-xl font-semibold text-text-primary ${
             isArabic ? "font-tajawal" : "font-malgun"
           }`}
         >
@@ -48,14 +48,14 @@ const ExperienceCard = ({ experience, index, isArabic }) => (
         </motion.p>
         <motion.p 
           whileHover={{ scale: 1.05 }}
-          className="text-xs text-gray-300 mt-1"
+          className="text-xs text-text-muted mt-1"
         >
           {experience.date}
         </motion.p>
       </div>
     </div>
     <ul
-      className={`list-disc list-inside space-y-2 text-sm text-gray-200 ${
+      className={`list-disc list-inside space-y-2 text-sm text-text-secondary ${
         isArabic ? "font-tajawal text-right" : "font-malgun text-left"
       }`}
     >
@@ -65,10 +65,10 @@ const ExperienceCard = ({ experience, index, isArabic }) => (
           whileHover={{ 
             scale: 1.02, 
             x: isArabic ? -10 : 10,
-            color: "#ffffff"
+            color: "var(--text-primary)"
           }}
           transition={{ duration: 0.2 }}
-          className="hover:text-white transition-colors duration-300"
+          className="hover:text-text-primary transition-colors duration-300"
         >
           {point}
         </motion.li>

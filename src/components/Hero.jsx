@@ -34,7 +34,7 @@ const Hero = () => {
           initial={{ opacity: 0, x: isArabic ? 50 : -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className={`text-sm sm:text-base text-gray-300 ${
+          className={`text-sm sm:text-base text-text-secondary ${
             isArabic ? "font-tajawal" : "font-preah"
           } mb-1 bounce-animation`}
         >
@@ -45,7 +45,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, delay: 0.4, type: "spring", stiffness: 100 }}
-          className={`text-4xl sm:text-5xl md:text-6xl font-bold text-white ${
+          className={`text-4xl sm:text-5xl md:text-6xl font-bold text-text-primary ${
             isArabic ? "font-tajawal" : "font-preah"
           } mb-1 text-glow`}
         >
@@ -64,7 +64,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.6 }}
-          className={`text-sm sm:text-lg md:text-xl text-gray-200 max-w-xl text-center ${
+          className={`text-sm sm:text-lg md:text-xl text-text-secondary max-w-xl text-center ${
             isArabic ? "font-tajawal sm:text-right" : "font-malgun sm:text-left"
           } mb-2`}
         >

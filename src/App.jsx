@@ -5,9 +5,9 @@ import { About, Partners, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Wo
 const App = () => {
   return (
     <BrowserRouter>
-      <div className='relative z-0 bg-gradient-to-b from-[#0a0a0a] to-[#1a1a2e] min-h-screen particle-bg'>
+      <div className='relative z-0 bg-gradient-to-b from-bg-primary to-bg-secondary min-h-screen particle-bg'>
         <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center relative overflow-hidden'>
-          <div className="absolute inset-0 bg-gradient-to-r from-[#ff6b6b]/10 via-[#4ecdc4]/10 to-[#45b7d1]/10 animate-pulse"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-ond-red/10 via-ond-teal/10 to-ond-blue/10 animate-pulse"></div>
           <Navbar />
           <Hero />
         </div>
