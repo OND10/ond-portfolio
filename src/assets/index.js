@@ -25,6 +25,7 @@ import backendIcon from "./backendIcon.png";
 import integrationIcon from "./integrationIcon.png";
 import consultant from "./consultant.png";
 import contentIcon from "./contentIcon.png";
+import university from "./university.png";
 
 export {
   cplusplus,
@@ -52,4 +53,5 @@ export {
   integrationIcon,
   consultant,
   contentIcon,
+  university,
 };

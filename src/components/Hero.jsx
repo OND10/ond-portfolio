@@ -5,7 +5,7 @@ import {
   ArrowDownTrayIcon,
   ChatBubbleLeftRightIcon,
 } from "@heroicons/react/24/solid";
-import myPhoto from "../assets/photo.png";
+import myPhoto from "../assets/ond_profile.jpg";
 import CV from "../public/HasanFuaad_CV.pdf";
 
 const Hero = () => {

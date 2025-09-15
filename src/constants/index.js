@@ -18,6 +18,7 @@ import {
   python,
   postman,
   SU,
+  university,
   backendIcon,
   integrationIcon,
   consultant,
@@ -29,23 +30,23 @@ import {
 export const getHeroText = (lang) => {
   return lang === "ar"
     ? {
-        hello: "مرحبًا، أنا",
-        name: "أسامة",
-        name2: "دماج",
-        passion:
-          "مطور Backend متخصص في .NET و React، أبني حلول قابلة للتوسع باستخدام Clean Architecture و CQRS. أحول الأفكار المعقدة إلى أنظمة فعالة وموثوقة.",
-        contact: "تواصل معي",
-        download: "تحميل السيرة الذاتية",
-      }
+      hello: "مرحبًا، أنا",
+      name: "أسامة",
+      name2: "دماج",
+      passion:
+        "مطور Backend متخصص في .NET و React، أبني حلول قابلة للتوسع باستخدام Clean Architecture و CQRS. أحول الأفكار المعقدة إلى أنظمة فعالة وموثوقة.",
+      contact: "تواصل معي",
+      download: "تحميل السيرة الذاتية",
+    }
     : {
-        hello: "Hello, I'm",
-        name: "Osama",
-        name2: "Dammag",
-        passion:
-          "Backend Developer specializing in .NET and React, building scalable solutions using Clean Architecture and CQRS. Transforming complex ideas into efficient and reliable systems.",
-        contact: "Contact Me",
-        download: "Download CV",
-      };
+      hello: "Hello, I'm",
+      name: "Osama",
+      name2: "Dammag",
+      passion:
+        "Backend Developer specializing in .NET and React, building scalable solutions using Clean Architecture and CQRS. Transforming complex ideas into efficient and reliable systems.",
+      contact: "Contact Me",
+      download: "Download CV",
+    };
 };
 
 export const getNavLinks = (lang) => {
@@ -59,8 +60,8 @@ export const getNavLinks = (lang) => {
       title: lang === "ar" ? "عني" : "About",
     },
     {
-      id: "partners",
-      title: lang === "ar" ? "شركائي" : "Partners",
+      id: "education",
+      title: lang === "ar" ? "تعليمي" : "Education",
     },
     {
       id: "work",
@@ -118,17 +119,15 @@ export const getServices = (lang) => [
 
 export const getPartners = (lang) => {
   return {
-    title: lang === "ar" ? "شركائي" : "Partners",
+    title: lang === "ar" ? "تعليمي" : "Education",
     description:
       lang === "ar"
-        ? `حيث شاركت رحلتي  <span class="text-violet-500 font-tajawal font-bold">بشغف</span> وتعاونت في مشاريع مؤثرة.`
-        : `Where I shared my <span class="text-violet-500 font-malgun font-bold">passionate</span>  journey and collaborated on impactful projects.`,
+        ? `بكالوريوس في  <span style="background:"class="font-tajawal font-bold"> علوم الحاسوب </span>جامعة صنعاء`
+        : `Bachelor Degree in<span class="font-malgun font-bold"> Computer Science</span>   Sana'a University`,
     logos: [
-      { src: SU, alt: "Partner 1" },
-      { src: SU, alt: "Partner 2" },
-      { src: SU, alt: "Partner 3" },
-      { src: SU, alt: "Partner 4" },
-      { src: SU, alt: "Partner 5" },
+      { src: university, alt: "Partner 1" },
+      { src: university, alt: "Partner 1" },
+      { src: university, alt: "Partner 1" },
     ],
   };
 };
@@ -145,15 +144,15 @@ export const getExperiences = (lang) => [
     points:
       lang === "ar"
         ? [
-            "أظهرت كفاءة استثنائية في تطوير البرمجيات باستخدام أحدث التقنيات.",
-            "طبق RESTful باستخدام Django REST Framework واختبرت APIs باستخدام Swagger و Postman، مما زاد من تغطية الاختبارات إلى 90%.",
-            "بناء تطبيقات ويب منظمة جيدًا باستخدام React.",
-          ]
+          "أظهرت كفاءة استثنائية في تطوير البرمجيات باستخدام أحدث التقنيات.",
+          "طبق RESTful باستخدام Django REST Framework واختبرت APIs باستخدام Swagger و Postman، مما زاد من تغطية الاختبارات إلى 90%.",
+          "بناء تطبيقات ويب منظمة جيدًا باستخدام React.",
+        ]
         : [
-            "Demonstrate exceptional proficiency in software development using the latest technologies.",
-            "Applied RESTful using Django REST framework and tested APIs using Swagger and Postman, increasing test coverage to 90%.",
-            "Build well-structured web applications using React.",
-          ],
+          "Demonstrate exceptional proficiency in software development using the latest technologies.",
+          "Applied RESTful using Django REST framework and tested APIs using Swagger and Postman, increasing test coverage to 90%.",
+          "Build well-structured web applications using React.",
+        ],
   },
   {
     title: lang === "ar" ? "مطور ويب" : "Web Developer",
@@ -164,15 +163,15 @@ export const getExperiences = (lang) => [
     points:
       lang === "ar"
         ? [
-            "أشرفت على فصل عمليات القراءة والكتابة من خلال دمج CQRS و Clean Architecture، مما أدى إلى تقليل أوقات استجابة الاستعلامات بنسبة 40% وتحسين إنتاجية النظام بنسبة 35%.",
-            "صممت ونفذت آليات مصادقة قوية قائمة على JWT، مما عزز أمان المنصة ومكن من استراتيجيات تحديث الرموز المميزة.",
-            "استخدمت Git و GitHub لإدارة إصدارات المشروع وتبسيط التعاون الجماعي، مما أدى إلى تقليل تضارب الدمج بنسبة 50%.",
-          ]
+          "أشرفت على فصل عمليات القراءة والكتابة من خلال دمج CQRS و Clean Architecture، مما أدى إلى تقليل أوقات استجابة الاستعلامات بنسبة 40% وتحسين إنتاجية النظام بنسبة 35%.",
+          "صممت ونفذت آليات مصادقة قوية قائمة على JWT، مما عزز أمان المنصة ومكن من استراتيجيات تحديث الرموز المميزة.",
+          "استخدمت Git و GitHub لإدارة إصدارات المشروع وتبسيط التعاون الجماعي، مما أدى إلى تقليل تضارب الدمج بنسبة 50%.",
+        ]
         : [
-            "Orchestrated the decoupling of read and write operations by integrating CQRS and Clean Architecture, leading to a 40% reduction in query response times and improved system throughput by 35%.",
-            "Designed and implemented robust JWT-based authentication mechanisms, enhancing platform security and enabling token refresh strategies.",
-            "Utilized Git and GitHub to manage project versions and streamline team collaboration, leading to a 50% reduction in merge conflicts.",
-          ],
+          "Orchestrated the decoupling of read and write operations by integrating CQRS and Clean Architecture, leading to a 40% reduction in query response times and improved system throughput by 35%.",
+          "Designed and implemented robust JWT-based authentication mechanisms, enhancing platform security and enabling token refresh strategies.",
+          "Utilized Git and GitHub to manage project versions and streamline team collaboration, leading to a 50% reduction in merge conflicts.",
+        ],
   },
   {
     title: lang === "ar" ? "مطور .NET" : ".NET Developer",
@@ -183,15 +182,15 @@ export const getExperiences = (lang) => [
     points:
       lang === "ar"
         ? [
-            "أشرفت على إطار عمل .NET Web API معياري يتبع مبادئ Clean Architecture، مما أدى إلى تقليل تكرار الكود بنسبة 40% وزيادة سرعة استجابة التصحيح بنسبة 25%.",
-            "طبق مبادئ RESTful و GraphQL واختبرت APIs باستخدام Swagger و Postman، مما زاد من تغطية الاختبارات إلى 90%.",
-            "استخدمت مبادئ SOLID ونفذت أنماط التصميم لتعزيز قابلية صيانة الكود وتقليل إعادة الهيكلة بنسبة 35%.",
-          ]
+          "أشرفت على إطار عمل .NET Web API معياري يتبع مبادئ Clean Architecture، مما أدى إلى تقليل تكرار الكود بنسبة 40% وزيادة سرعة استجابة التصحيح بنسبة 25%.",
+          "طبق مبادئ RESTful و GraphQL واختبرت APIs باستخدام Swagger و Postman، مما زاد من تغطية الاختبارات إلى 90%.",
+          "استخدمت مبادئ SOLID ونفذت أنماط التصميم لتعزيز قابلية صيانة الكود وتقليل إعادة الهيكلة بنسبة 35%.",
+        ]
         : [
-            "Orchestrated a modular .NET Web API framework adhering to Clean Architecture principles, resulting in a 40% decrease in code duplication and a 25% faster debugging response time.",
-            "Applied RESTful and GraphQL principles and tested APIs using Swagger and Postman, increasing test coverage to 90%.",
-            "Used SOLID principles and implemented design patterns to boost code maintainability and reduce refactoring by 35%.",
-          ],
+          "Orchestrated a modular .NET Web API framework adhering to Clean Architecture principles, resulting in a 40% decrease in code duplication and a 25% faster debugging response time.",
+          "Applied RESTful and GraphQL principles and tested APIs using Swagger and Postman, increasing test coverage to 90%.",
+          "Used SOLID principles and implemented design patterns to boost code maintainability and reduce refactoring by 35%.",
+        ],
   },
 ];
 
@@ -279,16 +278,12 @@ const technologies = [
     icon: dotnetcore,
   },
   {
-    name: ".NET 8",
-    icon: dotnetcore,
-  },
-  {
     name: "React",
     icon: reactjs,
   },
   {
-    name: "Entity Framework",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg",
+    name: "TypeScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
   },
   {
     name: "SQL Server",
@@ -299,24 +294,12 @@ const technologies = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
   },
   {
-    name: "REST API",
+    name: "Postgre Sql",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
   },
   {
     name: "GraphQL",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
-  },
-  {
-    name: "Clean Architecture",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/architecture/architecture-original.svg",
-  },
-  {
-    name: "CQRS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
-  },
-  {
-    name: "Microservices",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
   },
   {
     name: "Git",
@@ -339,9 +322,18 @@ const technologies = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuredevops/azuredevops-original.svg",
   },
   {
-    name: "XUnit",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
+    name: "Axios",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg",
   },
+  {
+    name: "Django-rest-framework",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/djangorest/djangorest-original.svg"
+  },
+  {
+    name: "Laravel",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
+  }
+
 ];
 
 export const getTestimonials = (lang) => Array.from({ length: 8 }, () => ({

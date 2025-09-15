@@ -15,10 +15,10 @@ const Partners = () => {
 
   return (
     <section
-      id="partners"
+      id="education"
       className={`w-full py-20 ${
         isArabic ? "text-right" : "text-left"
-      } bg-[#dddae43b] dark:bg-[#171042a9]`}
+      } bg-[#dddae43b] dark:bg-[#22191e]`}
     >
       <div className="text-center mb-10 px-4">
         <h2
