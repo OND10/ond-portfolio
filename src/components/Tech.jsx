@@ -17,7 +17,7 @@ const Tech = () => {
     <section
       className={`w-full py-20 px-0 overflow-hidden ${
         isArabic ? "text-right" : "text-left"
-      } bg-gradient-to-b from-bg-primary to-bg-secondary`}
+      } bg-primary`}
     >
       <div className="text-center mb-12 px-4 ">
         <h2

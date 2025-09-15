@@ -27,7 +27,7 @@ const Hero = () => {
     <section
       id="home"
       dir={isArabic ? "rtl" : "ltr"}
-      className="relative w-full h-screen mx-auto overflow-hidden flex flex-col md:flex-row items-center justify-center max-w-7xl px-4 sm:px-6 md:px-8 gap-0 md:gap-4"
+      className="relative w-full h-screen mx-auto overflow-hidden flex flex-col md:flex-row items-center justify-center max-w-7xl px-4 sm:px-6 md:px-8 gap-0 md:gap-4 bg-primary"
     >
       <div className="relative z-10 text-center md:text-left w-full md:w-1/2 mt-2 md:mt-0 -translate-y-6 md:translate-y-0 order-2 md:order-1 flex flex-col items-center md:items-start justify-center gap-2 max-w-xl">
         <motion.p

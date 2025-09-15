@@ -10,10 +10,10 @@ const styles = {
     "text-gray-600 dark:text-[#dfd9ff] font-medium lg:text-[28px] sm:text-[26px] xs:text-[20px] text-[20px] lg:leading-[40px]",
 
   sectionHeadText:
-    "text-violet-500 dark:text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]",
+    "text-text-primary font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]",
 
   sectionSubText:
-    "sm:text-[18px] text-[14px] text-gray-600 dark:text-secondary uppercase tracking-wider",
+    "sm:text-[18px] text-[14px] text-text-secondary uppercase tracking-wider",
 };
 
 export { styles };

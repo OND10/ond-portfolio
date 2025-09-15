@@ -98,7 +98,7 @@ const Experience = () => {
   const ftitle = experiences[0]?.ftitle || "";
 
   return (
-    <section id="work" className="scroll-mt-28 w-full py-20 px-4">
+    <section id="work" className="scroll-mt-28 w-full py-20 px-4 bg-primary">
       <motion.div variants={textVariant()}>
         <p
           className={`${styles.sectionSubText} text-center ${

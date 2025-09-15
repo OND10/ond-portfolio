@@ -103,7 +103,7 @@ const Feedbacks = () => {
   }, [currentIndex, testimonials]);
 
   return (
-    <div className="mt-16">
+    <section className="mt-16 bg-primary py-10">
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} ${isArabic ? "font-tajawal text-center sm:text-right" : "font-preah text-center sm:text-left"}`}>
           {isArabic ? "آراء الآخرين" : "What others say"}
@@ -148,7 +148,7 @@ const Feedbacks = () => {
           ></div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -58,12 +58,12 @@ const Contact = () => {
       {/* Form */}
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className={`flex-[0.75] bg-[#151030] p-8 rounded-2xl shadow-lg ${isArabic ? "text-right font-tajawal" : "text-left font-preah"}`}
+        className={`flex-[0.75] glass-card p-8 rounded-2xl shadow-lg ${isArabic ? "text-right font-tajawal" : "text-left font-preah"}`}
       >
         <p className="text-gray-400 text-[17px]">
           {isArabic ? "ابقى على تواصل" : "Get in touch"}
         </p>
-        <h3 className="text-white text-[30px] font-bold">
+        <h3 className="text-text-primary text-[30px] font-bold">
           {isArabic ? "تواصل معي" : "Contact"}
         </h3>
 
@@ -73,7 +73,7 @@ const Contact = () => {
           className="mt-12 flex flex-col gap-6"
         >
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-2">
+            <span className="text-text-primary font-medium mb-2">
               {isArabic ? "الاسم" : "Your Name"}
             </span>
             <input
@@ -82,12 +82,12 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder={isArabic ? "ما اسمك؟" : "What's your name?"}
-              className="bg-white/10 text-white px-4 py-3 rounded-md placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-violet-600 transition"
+              className="bg-glass text-text-primary px-4 py-3 rounded-md placeholder:text-text-secondary outline-none focus:ring-2 focus:ring-[var(--primary)] transition border border-glass-border"
             />
           </label>
 
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-2">
+            <span className="text-text-primary font-medium mb-2">
               {isArabic ? "البريد الإلكتروني" : "Your Email"}
             </span>
             <input
@@ -96,12 +96,12 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder={isArabic ? "ما بريدك الإلكتروني؟" : "What's your email?"}
-              className="bg-white/10 text-white px-4 py-3 rounded-md placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-violet-600 transition"
+              className="bg-glass text-text-primary px-4 py-3 rounded-md placeholder:text-text-secondary outline-none focus:ring-2 focus:ring-[var(--primary)] transition border border-glass-border"
             />
           </label>
 
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-2">
+            <span className="text-text-primary font-medium mb-2">
               {isArabic ? "رسالتك" : "Your Message"}
             </span>
             <textarea
@@ -110,13 +110,13 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder={isArabic ? "ما الذي ترغب في قوله؟" : "What would you like to say?"}
-              className="bg-white/10 text-white px-4 py-3 rounded-md placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-violet-600 transition"
+              className="bg-glass text-text-primary px-4 py-3 rounded-md placeholder:text-text-secondary outline-none focus:ring-2 focus:ring-[var(--primary)] transition border border-glass-border"
             />
           </label>
 
           <button
             type="submit"
-            className="bg-violet-600 hover:bg-violet-700 text-white font-semibold px-6 py-3 rounded-lg transition shadow-md w-fit self-end"
+            className="modern-btn font-semibold px-6 py-3 rounded-lg transition shadow-md w-fit self-end"
           >
             {loading ? (isArabic ? "جارٍ الإرسال..." : "Sending...") : (isArabic ? "إرسال" : "Send")}
           </button>
