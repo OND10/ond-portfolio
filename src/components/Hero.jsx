@@ -6,7 +6,7 @@ import {
   ChatBubbleLeftRightIcon,
 } from "@heroicons/react/24/solid";
 import myPhoto from "../assets/ond_profile.jpg";
-import CV from "../public/HasanFuaad_CV.pdf";
+import CV from "../public/Osama_Dammag_CV_New.pdf";
 
 const Hero = () => {
   const { i18n } = useTranslation();
