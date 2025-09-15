@@ -21,6 +21,7 @@ const ProjectCard = ({
     <motion.div 
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
       whileHover={{ y: -10 }}
+      className="w-full"
     >
       <Tilt
         options={{
@@ -28,7 +29,7 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className="glass-card hover-lift p-5 sm:w-[360px] w-full shadow-lg transition-all duration-300 group"
+        className="glass-card hover-lift p-5 w-full shadow-lg transition-all duration-300 group h-full flex flex-col"
       >
         <div className="relative w-full h-[230px] overflow-hidden rounded-2xl">
           <motion.img
@@ -71,7 +72,7 @@ const ProjectCard = ({
           )}
         </div>
 
-        <div className="mt-5">
+        <div className="mt-5 flex-1">
           <motion.h3
             whileHover={{ scale: 1.02 }}
             className={`text-text-primary font-bold text-[22px] ${
@@ -175,14 +176,15 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className="mt-20 flex flex-wrap gap-7 justify-center">
+      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 justify-center">
         {projects.map((project, index) => (
-          <ProjectCard
-            key={`project-${index}`}
-            index={index}
-            isArabic={isArabic}
-            {...project}
-          />
+          <div key={`project-${index}`} className="flex">
+            <ProjectCard
+              index={index}
+              isArabic={isArabic}
+              {...project}
+            />
+          </div>
         ))}
       </div>
     </section>
