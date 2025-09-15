@@ -140,7 +140,7 @@ const Works = () => {
   const projects = getProjects(lang);
 
   return (
-    <>
+    <section className="bg-primary py-10">
       <motion.div variants={textVariant()}>
         <p
           className={`${styles.sectionSubText} ${
@@ -185,7 +185,7 @@ const Works = () => {
           />
         ))}
       </div>
-    </>
+    </section>
   );
 };
 

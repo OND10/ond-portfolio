@@ -65,7 +65,7 @@ const About = () => {
   }, [i18n.language]);
 
   return (
-    <>
+    <section className="bg-primary py-10">
       <motion.div
         variants={textVariant()}
         className={`text-center sm:text-start `}
@@ -125,7 +125,7 @@ const About = () => {
           />
         ))}
       </div>
-    </>
+    </section>
   );
 };
 
