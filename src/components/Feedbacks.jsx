@@ -31,10 +31,10 @@ const FeedbackCard = ({ testimonial, name, designation, company, image, isArabic
         <img
           src={image}
           alt={name}
-          className="w-14 h-14 rounded-full object-cover border-4 border-violet-500 shadow-md"
+          className="w-14 h-14 rounded-full object-cover border-4 border-[var(--primary)] shadow-md"
         />
         <div className={`${isArabic ? "text-right font-tajawal" : "text-left font-preah"}`}>
-          <p className="text-violet-700 dark:text-violet-400 font-bold text-md">@{name}</p>
+          <p className="text-text-accent font-bold text-md">@{name}</p>
           <p className="text-gray-600 dark:text-gray-400 text-sm">
             {designation} {isArabic ? "في" : "at"} {company}
           </p>

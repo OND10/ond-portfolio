@@ -93,7 +93,7 @@ const Hero = () => {
             href={CV}
             download={"OsamaDammag_CV"}
             target="_blank"
-            className={`flex items-center justify-center gap-2 w-56 px-6 py-3 glass-card hover-lift text-white rounded-full shadow-lg transition duration-300 cursor-pointer ${
+            className={`flex items-center justify-center gap-2 w-56 px-6 py-3 glass-card hover-lift text-text-primary rounded-full shadow-lg transition duration-300 cursor-pointer ${
               isArabic ? "font-tajawal text-right" : "font-preah text-left"
             }`}
           >
@@ -141,7 +141,7 @@ const Hero = () => {
           <motion.div
             animate={{ scale: [1, 1.1, 1], rotate: [0, 5, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-[7.5rem] w-[200px] h-[200px] lg:w-[200px] lg:h-[200px] rounded-full bg-white opacity-60 blur-xl glow-animation"
+            className="absolute top-[7.5rem] w-[180px] h-[180px] sm:w-[200px] sm:h-[200px] lg:w-[200px] lg:h-[200px] rounded-full bg-white/70 dark:bg-white/50 blur-xl glow-animation"
             style={
               isDesktop
                 ? {
@@ -156,7 +156,7 @@ const Hero = () => {
             whileTap={{ scale: 0.95 }}
             src={myPhoto}
             alt="Osama Dammag"
-            className="z-10 w-[280px] h-[280px] lg:w-[320px] lg:h-[320px] object-contain object-center rounded-full border-4 border-white shadow-2xl relative top-8 hover-lift neon-glow"
+            className="z-10 w-[200px] h-[200px] sm:w:[240px] sm:h-[240px] md:w-[280px] md:h-[280px] lg:w-[320px] lg:h-[320px] object-cover object-center rounded-full border-4 border-white shadow-2xl relative top-6 md:top-8 hover-lift neon-glow"
             style={
               isDesktop
                 ? {
