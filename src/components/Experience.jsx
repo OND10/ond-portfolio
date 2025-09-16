@@ -10,17 +10,17 @@ import { useTranslation } from "react-i18next";
 const ExperienceCard = ({ experience, index, isArabic }) => (
   <motion.div
     variants={fadeIn("up", "tween", index * 0.15, 0.4)}
-    whileHover={{ 
-      scale: 1.05, 
+    whileHover={{
+      scale: 1.05,
       rotateY: 5,
-      boxShadow: "0px 20px 40px rgba(102, 126, 234, 0.3)" 
+      boxShadow: "0px 20px 40px rgba(102, 126, 234, 0.3)"
     }}
     whileTap={{ scale: 0.95 }}
     transition={{ type: "tween", duration: 0.3 }}
     className="glass-card hover-lift p-6 shadow-lg transition-transform group"
   >
     <div className="flex items-center gap-4 mb-4">
-      <motion.div 
+      <motion.div
         whileHover={{ rotate: 360, scale: 1.1 }}
         transition={{ duration: 0.6 }}
         className="flex justify-center items-center w-16 h-16 rounded-full bg-white/10 border border-glass-border p-2 group-hover:scale-110 transition-transform duration-300"
@@ -34,19 +34,18 @@ const ExperienceCard = ({ experience, index, isArabic }) => (
       <div className="flex-1">
         <motion.h3
           whileHover={{ scale: 1.02 }}
-          className={`text-xl font-semibold text-text-primary ${
-            isArabic ? "font-tajawal" : "font-malgun"
-          }`}
+          className={`text-xl font-semibold text-text-primary ${isArabic ? "font-tajawal" : "font-malgun"
+            }`}
         >
           {experience.title}
         </motion.h3>
-        <motion.p 
+        <motion.p
           whileHover={{ scale: 1.05 }}
           className="text-sm ond-gradient font-medium"
         >
           {experience.company_name}
         </motion.p>
-        <motion.p 
+        <motion.p
           whileHover={{ scale: 1.05 }}
           className="text-xs text-text-muted mt-1"
         >
@@ -55,15 +54,14 @@ const ExperienceCard = ({ experience, index, isArabic }) => (
       </div>
     </div>
     <ul
-      className={`list-disc list-inside space-y-2 text-sm text-text-secondary ${
-        isArabic ? "font-tajawal text-right" : "font-malgun text-left"
-      }`}
+      className={`list-disc list-inside space-y-2 text-sm text-text-secondary ${isArabic ? "font-tajawal text-right" : "font-malgun text-left"
+        }`}
     >
       {experience.points.map((point, i) => (
         <motion.li
           key={i}
-          whileHover={{ 
-            scale: 1.02, 
+          whileHover={{
+            scale: 1.02,
             x: isArabic ? -10 : 10,
             color: "var(--text-primary)"
           }}
@@ -101,16 +99,14 @@ const Experience = () => {
     <section id="work" className="scroll-mt-28 w-full py-20 px-4 bg-primary">
       <motion.div variants={textVariant()}>
         <h2
-          className={`${styles.sectionHeadText} ${
-            isArabic ? "font-tajawal" : "font-preah"
-          }`}
+          className={`${styles.sectionHeadText} ${isArabic ? "font-tajawal" : "font-preah"
+            }`}
         >
           {ftitle}
         </h2>
-         <p
-          className={`${styles.sectionSubText} ${
-            isArabic ? "font-tajawal" : "font-malgun"
-          }`}
+        <p
+          className={`${styles.sectionSubText} ${isArabic ? "font-tajawal" : "font-malgun"
+            }`}
         >
           {subtitle}
         </p>
