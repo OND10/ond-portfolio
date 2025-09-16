@@ -7,8 +7,6 @@ import {
   nodejs,
   git,
   rts,
-  gdsc,
-  ycit,
   p1,
   p2,
   p3,
@@ -17,12 +15,12 @@ import {
   flutter,
   python,
   postman,
-  SU,
   university,
   backendIcon,
   integrationIcon,
   consultant,
   contentIcon,
+  tabsera,
 } from "../assets";
 
 
@@ -137,8 +135,8 @@ export const getExperiences = (lang) => [
     subtitle: lang === "ar" ? "ما فعلته حتى الآن " : "What I have done so far",
     ftitle: lang === "ar" ? "الخبرات العملية" : "Work Experience",
     title: lang === "ar" ? "مهندس برمجيات" : "Software Engineer",
-    company_name: lang === "ar" ? "مؤسسة تبسرة" : "Tabsera Foundation",
-    icon: gdsc,
+    company_name: lang === "ar" ? "مؤسسة تبصرة" : "Tabsera Foundation",
+    icon: tabsera,
     iconBg: "#E6DEDD",
     date: lang === "ar" ? "2024 - الآن" : "2024 - now",
     points:
@@ -176,7 +174,7 @@ export const getExperiences = (lang) => [
   {
     title: lang === "ar" ? "مطور .NET" : ".NET Developer",
     company_name: lang === "ar" ? "ثروات للخدمات المالية والاستثمار" : "Tharawat for Financial Services & Investment",
-    icon: ycit,
+    icon: rts,
     iconBg: "#383E56",
     date: lang === "ar" ? "09/2023 - 02/2024" : "09/2023 - 02/2024",
     points:

@@ -13,20 +13,17 @@ import flutter from "./tech/flutter.svg";
 import python from "./tech/python.svg";
 import postman from "./tech/postman.svg";
 
-import ycit from "./company/ycit.png";
 import rts from "./company/rts.png";
-import gdsc from "./company/gdsc.png";
 
 import p1 from "./p1.png";
 import p2 from "./p2.png";
 import p3 from "./p3.png";
-import SU from "./SU.png";
 import backendIcon from "./backendIcon.png";
 import integrationIcon from "./integrationIcon.png";
 import consultant from "./consultant.png";
 import contentIcon from "./contentIcon.png";
 import university from "./university.png";
-
+import tabsera from "./company/tabsera.jpeg";
 export {
   cplusplus,
   csharp,
@@ -38,9 +35,7 @@ export {
   reactjs,
   tailwind,
   threejs,
-  ycit,
   rts,
-  gdsc,
   p1,
   p2,
   p3,
@@ -48,10 +43,10 @@ export {
   flutter,
   python,
   postman,
-  SU,
   backendIcon,
   integrationIcon,
   consultant,
   contentIcon,
   university,
+  tabsera,
 };
