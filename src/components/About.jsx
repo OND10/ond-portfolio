@@ -66,37 +66,13 @@ const About = () => {
 
   return (
     <section className="bg-primary py-10">
-      <motion.div
-        variants={textVariant()}
-        className={`text-center sm:text-start `}
-      >
-        <p
-          className={`text-sm text-gray-400 ${
-            isArabic
-              ? "font-tajawal text-center sm:text-right"
-              : "font-preah text-center sm:text-left"
-          }`}
-        >
+      <motion.div variants={textVariant()}>
+        <p className={`${styles.sectionSubText} ${isArabic ? "font-tajawal" : "font-preah"}`}>
           {aboutText.subtitle}
         </p>
-        <h2
-          className={`text-4xl font-bold text-black dark:text-white ${
-            isArabic
-              ? "font-tajawal text-center sm:text-right"
-              : "font-preah text-center sm:text-left"
-          } mt-4 mb-8`}
-        >
+        <h2 className={`${styles.sectionHeadText} ${isArabic ? "font-tajawal" : "font-preah"} mt-4 mb-8`}>
           {aboutText.ftitle}
-          <span
-            className={`ond-gradient ${
-              isArabic
-                ? "font-tajawal text-center sm:text-right"
-                : "font-preah text-center sm:text-left"
-            } mt-4 mb-8`}
-          >
-            {" "}
-            {aboutText.stitle}
-          </span>
+          <span className="ond-gradient"> {aboutText.stitle}</span>
         </h2>
       </motion.div>
 
