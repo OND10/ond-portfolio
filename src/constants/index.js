@@ -21,6 +21,7 @@ import {
   consultant,
   contentIcon,
   tabsera,
+  visual,
 } from "../assets";
 
 
@@ -83,12 +84,12 @@ export const getAboutText = (lang) => {
     stitle: lang === "ar" ? "أسامة ؟" : "Osama ?",
     description:
       lang === "ar"
-        ? `مرحبًا، أنا <span class="text-violet-500 font-tajawal font-bold">أسامة دماج</span> مطور Backend مبتدئ مع خبرة سنتين في .NET و React. متخصص في بناء أنظمة قابلة للتوسع باستخدام Clean Architecture و CQRS.
+        ? `مرحبًا، أنا <span class="text-white font-tajawal font-bold">أسامة دماج</span> مطور Backend مبتدئ مع خبرة سنتين في .NET و React. متخصص في بناء أنظمة قابلة للتوسع باستخدام Clean Architecture و CQRS.
 
 عملت في شركات مختلفة من Visual Soft إلى Tharawat للخدمات المالية، حيث ساهمت في تحسين أداء الأنظمة بنسبة 40% وتقليل أوقات الاستجابة بنسبة 35% من خلال تطبيق أفضل الممارسات في البرمجة.
 
 أنا شغوف بتطوير حلول مبتكرة باستخدام أحدث التقنيات، وأستمتع بتحويل الأفكار المعقدة إلى أنظمة فعالة وموثوقة. دعنا نبتكر معًا.`
-        : `Hi, I'm <span class="text-violet-500 font-malgun font-bold">Osama Dammag</span> a junior backend developer with 2 years of hands-on experience using .NET and React. I specialize in building scalable systems using Clean Architecture and CQRS.
+        : `Hi, I'm <span class="text-white font-malgun font-bold">Osama Dammag</span> a junior backend developer with 2 years of hands-on experience using .NET and React. I specialize in building scalable systems using Clean Architecture and CQRS.
 
 I've worked with various companies from Visual Soft to Tharawat for Financial Services, where I contributed to improving system performance by 40% and reducing response times by 35% through implementing best programming practices.
 
@@ -106,7 +107,7 @@ export const getServices = (lang) => [
     icon: integrationIcon,
   },
   {
-    title: lang === "ar" ? "مهندس معماري" : "Software Architect",
+    title: lang === "ar" ? "مهندس برمجيات" : "Software Architect",
     icon: consultant,
   },
   {
@@ -120,8 +121,8 @@ export const getPartners = (lang) => {
     title: lang === "ar" ? "تعليمي" : "Education",
     description:
       lang === "ar"
-        ? `بكالوريوس في  <span style="background:"class="font-tajawal font-bold"> علوم الحاسوب </span>جامعة صنعاء`
-        : `Bachelor Degree in<span class="font-malgun font-bold"> Computer Science</span>   Sana'a University`,
+        ? `بكالوريوس في  <span style="background:"class="font-tajawal font-bold"> علوم الحاسوب </span>جامعة صنعاء 2025`
+        : `Bachelor Degree in<span class="font-malgun font-bold"> Computer Science</span>   Sana'a University 2025`,
     logos: [
       { src: university, alt: "Partner 1" },
       { src: university, alt: "Partner 1" },
@@ -155,7 +156,7 @@ export const getExperiences = (lang) => [
   {
     title: lang === "ar" ? "مطور ويب" : "Web Developer",
     company_name: lang === "ar" ? "Visual Soft" : "Visual Soft",
-    icon: rts,
+    icon: visual,
     iconBg: "#383E56",
     date: lang === "ar" ? "06/2024 - 08/2024" : "06/2024 - 08/2024",
     points:
@@ -350,8 +351,8 @@ export const getFooter = (lang) => {
     description:
       lang === "ar" ? "© 2025 كل الحقوق محفوظة ل أسامة دماج" : "© 2025 All rights reserved to Osama Dammag",
     socialLinks: [
-      { icon: "FaGithub", link: "https://github.com/osamadammag" },
-      { icon: "FaLinkedin", link: "https://www.linkedin.com/in/osama-dammag/" },
+      { icon: "FaGithub", link: "https://github.com/OND10" },
+      { icon: "FaLinkedin", link: "https://www.linkedin.com/in/osama-dammag" },
       { icon: "FaTwitter", link: "https://twitter.com/osamadammag" },
       { icon: "FaEnvelope", link: "mailto:osama.dammag@gmail.com" },
     ],

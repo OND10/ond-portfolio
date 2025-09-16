@@ -100,13 +100,6 @@ const Experience = () => {
   return (
     <section id="work" className="scroll-mt-28 w-full py-20 px-4 bg-primary">
       <motion.div variants={textVariant()}>
-        <p
-          className={`${styles.sectionSubText} ${
-            isArabic ? "font-tajawal" : "font-malgun"
-          }`}
-        >
-          {subtitle}
-        </p>
         <h2
           className={`${styles.sectionHeadText} ${
             isArabic ? "font-tajawal" : "font-preah"
@@ -114,6 +107,13 @@ const Experience = () => {
         >
           {ftitle}
         </h2>
+         <p
+          className={`${styles.sectionSubText} ${
+            isArabic ? "font-tajawal" : "font-malgun"
+          }`}
+        >
+          {subtitle}
+        </p>
       </motion.div>
       <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {experiences.map((experience, index) => (

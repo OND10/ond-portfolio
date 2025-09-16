@@ -23,7 +23,8 @@ import integrationIcon from "./integrationIcon.png";
 import consultant from "./consultant.png";
 import contentIcon from "./contentIcon.png";
 import university from "./university.png";
-import tabsera from "./company/tabsera.jpeg";
+import tabsera from "./company/tabsera.png";
+import visual from "./company/visualsoft.png";
 export {
   cplusplus,
   csharp,
@@ -49,4 +50,5 @@ export {
   contentIcon,
   university,
   tabsera,
+  visual,
 };

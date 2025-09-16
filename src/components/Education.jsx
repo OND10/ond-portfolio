@@ -16,22 +16,19 @@ const Partners = () => {
   return (
     <section
       id="education"
-      className={`w-full py-20 ${
-        isArabic ? "text-right" : "text-left"
-      } bg-[#dddae43b] dark:bg-[#22191e]`}
+      className={`w-full py-20 ${isArabic ? "text-right" : "text-left"
+        } bg-[#fdfefe] dark:bg-[#0d0d11]`}
     >
       <div className="text-center mb-10 px-4">
         <h2
-          className={`text-5xl font-bold ${
-            isArabic ? "font-tajawal" : "font-preah"
-          } text-violet-500 dark:text-white`}
+          className={`text-5xl font-bold ${isArabic ? "font-tajawal" : "font-preah"
+            } text-black dark:text-white`}
         >
           {partners.title}
         </h2>
         <p
-          className={`mt-4 text-gray-800 dark:text-gray-300 text-lg ${
-            isArabic ? "font-tajawal" : "font-malgun"
-          }`}
+          className={`mt-4 text-gray-800 dark:text-gray-300 text-lg ${isArabic ? "font-tajawal" : "font-malgun"
+            }`}
           dangerouslySetInnerHTML={{ __html: partners.description }}
         />
       </div>

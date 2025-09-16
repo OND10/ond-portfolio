@@ -19,11 +19,10 @@ const FeedbackCard = ({ testimonial, name, designation, company, image, isArabic
         “
       </div>
 
-      <p className={`text-[17px] leading-relaxed mb-6 z-10 relative ${
-        isArabic
-          ? "text-right font-tajawal text-gray-900 dark:text-white"
-          : "text-left font-preah text-gray-900 dark:text-white"
-      }`}>
+      <p className={`text-[17px] leading-relaxed mb-6 z-10 relative ${isArabic
+        ? "text-right font-tajawal text-gray-900 dark:text-white"
+        : "text-left font-preah text-gray-900 dark:text-white"
+        }`}>
         {truncatedText}
       </p>
 
@@ -104,12 +103,14 @@ const Feedbacks = () => {
 
   return (
     <section className="mt-16 bg-primary py-10">
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} ${isArabic ? "font-tajawal text-center sm:text-right" : "font-preah text-center sm:text-left"}`}>
-          {isArabic ? "آراء الآخرين" : "What others say"}
+      <motion.div
+        variants={textVariant()}
+        className="flex flex-col items-center text-center"
+      >
+        <p className={`${styles.sectionSubText} ${isArabic ? "font-tajawal" : "font-preah"}`}>
         </p>
-        <h2 className={`${styles.sectionHeadText} ${isArabic ? "font-tajawal text-center sm:text-right" : "font-preah text-center sm:text-left"}`}>
-          {isArabic ? "الشهادات" : "Testimonials"}
+        <h2 className={`mb-8 ${styles.sectionHeadText} ${isArabic ? "font-tajawal" : "font-preah"}`}>
+          {isArabic ? "آراء الآخرين" : "What others say"}
         </h2>
       </motion.div>
 
@@ -135,16 +136,15 @@ const Feedbacks = () => {
         </AnimatePresence>
       </div>
 
-      <div className="mt-6 flex justify-center gap-2">
+      <div className="mt-20  flex justify-center gap-2">
         {testimonials.map((_, i) => (
           <div
             key={i}
             onClick={() => setCurrentIndex(i)}
-            className={`w-3 h-3 rounded-full cursor-pointer ${
-              i === currentIndex
-                ? "bg-violet-600 scale-110"
-                : "bg-gray-300 dark:bg-gray-600"
-            } transition-all`}
+            className={`w-3 h-3 rounded-full cursor-pointer ${i === currentIndex
+              ? "bg-sky-400 scale-110"
+              : "bg-gray-300 dark:bg-gray-600"
+              } transition-all`}
           ></div>
         ))}
       </div>

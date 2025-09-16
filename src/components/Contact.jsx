@@ -126,7 +126,7 @@ const Contact = () => {
       {/* Placeholder for visual or 3D Earth */}
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[300px] flex items-center justify-center"
+        className="xl:flex-1 xl:h-auto md:h-[70px] h-[20px] flex items-center justify-center"
       >
         <div className={`text-gray-400 italic ${isArabic ? "font-tajawal" : "font-preah"}`}>
           {isArabic ? "لا تتردد في التواصل معي 👋" : "Feel free to reach out 👋"}

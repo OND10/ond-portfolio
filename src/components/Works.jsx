@@ -18,7 +18,7 @@ const ProjectCard = ({
   isArabic,
 }) => {
   return (
-    <motion.div 
+    <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
       whileHover={{ y: -10 }}
       className="w-full"
@@ -38,10 +38,10 @@ const ProjectCard = ({
             alt="project_image"
             className="w-full h-full object-cover rounded-2xl group-hover:scale-110 transition-transform duration-500"
           />
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             whileHover={{ opacity: 1 }}
-            className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent transition-opacity duration-300" 
+            className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent transition-opacity duration-300"
           />
 
           {source_code_link && (
@@ -75,17 +75,15 @@ const ProjectCard = ({
         <div className="mt-5 flex-1">
           <motion.h3
             whileHover={{ scale: 1.02 }}
-            className={`text-text-primary font-bold text-[22px] ${
-              isArabic ? "font-tajawal text-right" : "font-preah text-left"
-            }`}
+            className={`text-text-primary font-bold text-[22px] ${isArabic ? "font-tajawal text-right" : "font-preah text-left"
+              }`}
           >
             {name}
           </motion.h3>
           <motion.p
             whileHover={{ scale: 1.01 }}
-            className={`mt-2 text-text-secondary text-[15px] leading-relaxed ${
-              isArabic ? "font-tajawal text-right" : "font-malgun text-left"
-            }`}
+            className={`mt-2 text-text-secondary text-[15px] leading-relaxed ${isArabic ? "font-tajawal text-right" : "font-malgun text-left"
+              }`}
           >
             {description}
           </motion.p>
@@ -99,15 +97,13 @@ const ProjectCard = ({
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: tagIndex * 0.1 }}
               whileHover={{ scale: 1.1, rotate: 5 }}
-              className={`px-3 py-1 rounded-full text-xs font-medium ${
-                isArabic ? "font-tajawal" : "font-preah"
-              } ${
-                tag.color === "blue-text-gradient" 
-                  ? "bg-blue-500/20 text-blue-300" 
+              className={`px-3 py-1 rounded-full text-xs font-medium ${isArabic ? "font-tajawal" : "font-preah"
+                } ${tag.color === "blue-text-gradient"
+                  ? "bg-blue-500/20 text-blue-300"
                   : tag.color === "green-text-gradient"
-                  ? "bg-green-500/20 text-green-300"
-                  : "bg-pink-500/20 text-pink-300"
-              }`}
+                    ? "bg-green-500/20 text-green-300"
+                    : "bg-pink-500/20 text-pink-300"
+                }`}
             >
               {tag.name}
             </motion.span>
@@ -144,31 +140,26 @@ const Works = () => {
     <section className="bg-primary py-10">
       <motion.div variants={textVariant()}>
         <p
-          className={`${styles.sectionSubText} ${
-            isArabic ? "font-tajawal" : "font-preah"
-          }`}
+          className={`${styles.sectionSubText} ${isArabic ? "font-tajawal" : "font-preah"
+            }`}
         >
-          {isArabic ? "أعمالي" : "My Work"}
         </p>
         <h2
-          className={`${styles.sectionHeadText} ${
-            isArabic ? "font-tajawal" : "font-preah"
+          className={`${styles.sectionHeadText} ${isArabic ? "font-tajawal" : "font-preah"
           }`}
-        >
-          {isArabic ? "المشاريع" : "Projects"}
+          >
+          {isArabic ? "أعمالي" : "My Work"}
         </h2>
       </motion.div>
 
-      <div className="w-full flex">
+      <div className={`w-full flex flex-col items-center ${isArabic ? "text-right" : "text-left"}`}>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className={`mt-3 text-gray-600 dark:text-gray-300 text-[17px] max-w-3xl leading-[30px] ${
-            isArabic ? "font-tajawal text-right" : "font-malgun text-left"
-          }`}
+          className={`mt-3 text-gray-600 dark:text-gray-300 text-center text-[17px] max-w-3xl leading-[30px] ${isArabic ? "font-tajawal" : "font-malgun"}`}
         >
           {isArabic
-            ? "تعرض هذه المشاريع مهاراتي وخبرتي من خلال أمثلة واقعية. كل مشروع يتضمن وصفًا مختصرًا ورابطًا إلى كود المصدر، مما يبرز قدرتي على حل المشكلات والعمل مع تقنيات مختلفة."
-            : "These projects showcase my skills and experience through real-world examples. Each project includes a brief description and links to the code repositories, highlighting my ability to solve problems and work with various technologies."}
+            ? "تعرض هذه المشاريع مهاراتي وخبرتي من خلال أمثلة واقعية..."
+            : "These projects showcase my skills and experience through real-world examples..."}
         </motion.p>
       </div>
 

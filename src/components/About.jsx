@@ -6,14 +6,15 @@ import { useTranslation } from "react-i18next";
 import { getServices, getAboutText } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+import { styles } from "../styles";
 
 const ServiceCard = ({ index, title, icon, isArabic }) => (
   <Tilt className="w-full sm:w-[250px]">
     <motion.div
       variants={fadeIn("right", "spring", index * 0.3, 0.75)}
-      whileHover={{ 
-        scale: 1.05, 
-        rotateY: 5, 
+      whileHover={{
+        scale: 1.05,
+        rotateY: 5,
         rotateX: 5,
         boxShadow: "0 20px 40px rgba(102, 126, 234, 0.3)"
       }}
@@ -21,7 +22,7 @@ const ServiceCard = ({ index, title, icon, isArabic }) => (
       className="glass-card hover-lift p-6 shadow-lg transition-all duration-300 group"
     >
       <div className="flex flex-col items-center text-center gap-4">
-        <motion.div 
+        <motion.div
           whileHover={{ rotate: 360, scale: 1.2 }}
           transition={{ duration: 0.6 }}
           className="w-20 h-20 rounded-full ond-bg-gradient p-4 group-hover:scale-110 transition-transform duration-300 glow-animation"
@@ -30,11 +31,10 @@ const ServiceCard = ({ index, title, icon, isArabic }) => (
         </motion.div>
         <motion.h3
           whileHover={{ scale: 1.05 }}
-          className={`text-text-primary text-[16px] font-semibold ${
-            isArabic
+          className={`text-text-primary text-[16px] font-semibold ${isArabic
               ? "font-tajawal text-center sm:text-right"
               : "font-preah text-center sm:text-left"
-          }`}
+            }`}
         >
           {title}
         </motion.h3>
@@ -67,7 +67,7 @@ const About = () => {
   return (
     <section className="bg-primary py-10">
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} ${isArabic ? "font-tajawal" : "font-preah"}`}>
+        <p className={`${styles.sectionSubText} ${isArabic ? "font-tajawal" : "font-preah"} `}>
           {aboutText.subtitle}
         </p>
         <h2 className={`${styles.sectionHeadText} ${isArabic ? "font-tajawal" : "font-preah"} mt-4 mb-8`}>
@@ -78,15 +78,14 @@ const About = () => {
 
       <motion.div
         variants={fadeIn("", "", 0.1, 1)}
-        className={`glass-card hover-lift p-8 max-w-6xl min-h-[220px] text-[18px] text-text-primary 
-    leading-[32px] shadow-lg text-center sm:text-start`}
+        className={`glass-card hover-lift  p-8 max-w-6xl min-h-[220px] text-[18px] text-text-primary 
+    leading-[32px] shadow-lg md:text-justify sm:text-wrap sm:text-start`}
       >
         <div
-          className={`${
-            isArabic
+          className={`${isArabic
               ? "font-tajawal text-center sm:text-right"
               : "font-malgun text-center sm:text-left"
-          }`}
+            }`}
           dangerouslySetInnerHTML={{ __html: aboutText.description }}
         />
       </motion.div>

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
 import { useTranslation } from "react-i18next";
+import { styles } from "../styles";
 
 const Tech = () => {
   const { i18n } = useTranslation();
@@ -39,7 +40,7 @@ const Tech = () => {
               boxShadow: "0 0 30px rgba(102, 126, 234, 0.5)"
             }}
             whileTap={{ scale: 0.9 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            // transition={{ type: "spring", stiffness: 300, damping: 20 }}
             initial={{ opacity: 0, y: 50, rotate: -180 }}
             animate={{ opacity: 1, y: 0, rotate: 0 }}
             transition={{ delay: index * 0.1, duration: 0.8 }}
