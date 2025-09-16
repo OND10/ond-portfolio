@@ -145,18 +145,14 @@ const Works = () => {
       <motion.div variants={textVariant()}>
         <p
           className={`${styles.sectionSubText} ${
-            isArabic
-              ? "font-tajawal text-center sm:text-right"
-              : "font-preah text-center sm:text-left"
+            isArabic ? "font-tajawal" : "font-preah"
           }`}
         >
           {isArabic ? "أعمالي" : "My Work"}
         </p>
         <h2
           className={`${styles.sectionHeadText} ${
-            isArabic
-              ? "font-tajawal text-center sm:text-right"
-              : "font-preah text-center sm:text-left"
+            isArabic ? "font-tajawal" : "font-preah"
           }`}
         >
           {isArabic ? "المشاريع" : "Projects"}

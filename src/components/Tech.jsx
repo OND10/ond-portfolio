@@ -20,18 +20,10 @@ const Tech = () => {
       } bg-primary`}
     >
       <div className="text-center mb-12 px-4 ">
-        <h2
-          className={`text-4xl font-bold ond-gradient ${
-            isArabic ? "font-tajawal" : "font-preah"
-          }`}
-        >
+        <h2 className={`${styles.sectionHeadText} ${isArabic ? "font-tajawal" : "font-preah"}`}>
           {title}
         </h2>
-        <p
-          className={`mt-4 text-text-secondary text-lg ${
-            isArabic ? "font-tajawal" : "font-preah"
-          }`}
-        >
+        <p className={`mt-4 text-text-secondary text-sm ${isArabic ? "font-tajawal" : "font-preah"}`}>
           {subtitle}
         </p>
       </div>

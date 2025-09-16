@@ -21,14 +21,14 @@ const ExperienceCard = ({ experience, index, isArabic }) => (
   >
     <div className="flex items-center gap-4 mb-4">
       <motion.div 
-        whileHover={{ rotate: 360, scale: 1.2 }}
+        whileHover={{ rotate: 360, scale: 1.1 }}
         transition={{ duration: 0.6 }}
-        className="flex justify-center items-center w-20 h-20 rounded-full ond-bg-gradient p-3 group-hover:scale-110 transition-transform duration-300 glow-animation"
+        className="flex justify-center items-center w-16 h-16 rounded-full bg-white/10 border border-glass-border p-2 group-hover:scale-110 transition-transform duration-300"
       >
         <img
           src={experience.icon}
           alt={experience.company_name}
-          className="w-full h-full object-contain filter brightness-0 invert"
+          className="w-full h-full object-contain"
         />
       </motion.div>
       <div className="flex-1">
@@ -101,14 +101,14 @@ const Experience = () => {
     <section id="work" className="scroll-mt-28 w-full py-20 px-4 bg-primary">
       <motion.div variants={textVariant()}>
         <p
-          className={`${styles.sectionSubText} text-center ${
+          className={`${styles.sectionSubText} ${
             isArabic ? "font-tajawal" : "font-malgun"
           }`}
         >
           {subtitle}
         </p>
         <h2
-          className={`${styles.sectionHeadText} text-center ${
+          className={`${styles.sectionHeadText} ${
             isArabic ? "font-tajawal" : "font-preah"
           }`}
         >
