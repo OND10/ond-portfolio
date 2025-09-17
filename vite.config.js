@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: "/ond-portfolio/"
+  base: 'https://ond10.github.io/ond-portfolio/',
 })
