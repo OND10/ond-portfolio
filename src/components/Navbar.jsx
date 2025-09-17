@@ -147,6 +147,7 @@ const Navbar = () => {
                 alt="Mobile Logo"
                 className="w-[30px] h-[30px] object-contain transition-transform duration-300 ease-in-out"
                 style={{ transform: toggle ? "rotate(90deg)" : "rotate(0deg)" }}
+                loading="lazy"
               />
             </button>
 

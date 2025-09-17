@@ -29,6 +29,7 @@ const ExperienceCard = ({ experience, index, isArabic }) => (
           src={experience.icon}
           alt={experience.company_name}
           className="w-full h-full object-contain"
+          loading="lazy"
         />
       </motion.div>
       <div className="flex-1">

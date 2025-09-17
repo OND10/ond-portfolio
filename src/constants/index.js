@@ -1,3 +1,4 @@
+import { image } from "framer-motion/client";
 import {
   csharp,
   dotnetcore,
@@ -335,13 +336,14 @@ const technologies = [
 
 ];
 
-export const getTestimonials = (lang) => Array.from({ length: 8 }, () => ({
+export const getTestimonials = (lang) => Array.from({ length: 2 }, () => ({
   testimonial: lang === "ar"
     ? "اسامة شخص شغوف، ذو خبرة ومهارات عالية. لقد حظيت بفرصة العمل معه، وكان دائمًا يبهرني بخبرته. قدرته على حل المشكلات وتفانيه تعكس التزامه القوي بالتطور الشخصي. استمتعت كثيرًا بالعمل معه وأوصي به بشدة لأي مشروع أو فريق."
     : "Osama is a passionate, experienced, and highly skilled professional. I’ve had the pleasure of working with him, and his expertise consistently impressed me. His problem-solving abilities and dedication reflect a strong commitment to personal growth. I thoroughly enjoyed collaborating with Osama and highly recommend him for any project or team.",
   name: "Test",
   designation: lang === "ar" ? "مطور فل ستاك" : "full-stack developer",
   company: "None",
+  image: "",
   // image: "https://ahmadalrai.com/_next/image?url=%2FintroImg.jpg&w=256&q=95",
 }));
 

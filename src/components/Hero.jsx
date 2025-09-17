@@ -159,6 +159,7 @@ const Hero = () => {
             //     }
             //     : {}
             // }
+            loading="lazy"
           />
         </div>
       </motion.div>

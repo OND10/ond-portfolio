@@ -31,6 +31,7 @@ const FeedbackCard = ({ testimonial, name, designation, company, image, isArabic
           src={image}
           alt={name}
           className="w-14 h-14 rounded-full object-cover border-4 border-[var(--primary)] shadow-md"
+          loading="lazy"
         />
         <div className={`${isArabic ? "text-right font-tajawal" : "text-left font-preah"}`}>
           <p className="text-text-accent font-bold text-md">@{name}</p>
@@ -48,7 +49,7 @@ FeedbackCard.propTypes = {
   name: PropTypes.string.isRequired,
   designation: PropTypes.string.isRequired,
   company: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  image: PropTypes.string,
   isArabic: PropTypes.bool.isRequired,
 };
 

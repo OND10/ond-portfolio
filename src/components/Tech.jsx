@@ -51,6 +51,7 @@ const Tech = () => {
                 src={tech.icon}
                 alt={tech.name}
                 className="w-16 h-16 object-contain group-hover:scale-110 transition-transform duration-300"
+                loading="lazy"
               />
             ) : (
               <motion.span

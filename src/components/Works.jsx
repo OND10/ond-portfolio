@@ -37,6 +37,7 @@ const ProjectCard = ({
             src={image}
             alt="project_image"
             className="w-full h-full object-cover rounded-2xl group-hover:scale-110 transition-transform duration-500"
+            loading="lazy"
           />
           <motion.div
             initial={{ opacity: 0 }}

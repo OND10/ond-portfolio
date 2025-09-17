@@ -40,6 +40,7 @@ const Partners = () => {
               src={logo.src}
               alt={logo.alt}
               className="h-24 sm:h-36 object-contain transition-all duration-500 ease-in-out drop-shadow-xl"
+              loading="lazy"
             />
           </div>
         ))}
