@@ -156,11 +156,11 @@ const Works = () => {
       <div className={`w-full flex flex-col items-center ${isArabic ? "text-right" : "text-left"}`}>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className={`mt-3 text-gray-600 dark:text-gray-300 text-center text-[17px] max-w-3xl leading-[30px] ${isArabic ? "font-tajawal" : "font-malgun"}`}
+          className={`mt-3 text-gray-600 dark:text-gray-300 text-center text-[17px] max-w-3xl leading-relaxed ${isArabic ? "font-tajawal" : "font-malgun"}`}
         >
           {isArabic
-            ? "تعرض هذه المشاريع مهاراتي وخبرتي من خلال أمثلة واقعية..."
-            : "These projects showcase my skills and experience through real-world examples..."}
+            ? "هذه المشاريع تعكس خبرتي في بناء أنظمة عالية الأداء، وتجارب متعددة المستأجرين، ومنصات واجهات أمامية قوية."
+            : "These projects reflect my experience building high-performance systems, multi-tenant architectures, and polished frontend platforms."}
         </motion.p>
       </div>
 

@@ -6,7 +6,7 @@ import {
   ChatBubbleLeftRightIcon,
 } from "@heroicons/react/24/solid";
 import myPhoto from "../assets/ond_profile.jpg";
-import CV from "../public/Osama_Dammag_CV_New.pdf";
+import CV from "../public/Osama Nashwan Wazea Dammag - Resume.pdf";
 
 const Hero = () => {
   const { i18n } = useTranslation();
@@ -14,20 +14,28 @@ const Hero = () => {
   const heroText = getHeroText(lang);
   const isArabic = lang === "ar";
 
-  // Avoid SSR issues: only access window in effect or inside event handlers if needed
-  // const isDesktop = typeof window !== "undefined" && window.innerWidth >= 768;
-  // For SSR safety, use a default value or a hook for responsive checks if needed
-  // Here we use a fallback to false for SSR
-  let isDesktop = false;
-  if (typeof window !== "undefined") {
-    isDesktop = window.innerWidth >= 768;
-  }
+  const heroPoints = lang === "ar"
+    ? [
+        "خبرة أكثر من سنتين في .NET وAngular وReact",
+        "تنفيذ Clean Architecture وMicroservices وDDD",
+        "أتمتة CI/CD باستخدام Azure DevOps",
+      ]
+    : [
+        "2+ years of experience in .NET, Angular, and React",
+        "Implementing Clean Architecture, Microservices, and DDD",
+        "Automating CI/CD using Azure DevOps",
+      ];
+
+  // const getButtonClass = () =>
+  //   "modern-btn flex items-center justify-center gap-2 w-full md:w-auto px-6 py-3 hover-lift glow-animation font-semibold rounded-full transition duration-300";
+
+  const isDesktop = typeof window !== "undefined" && window.innerWidth >= 768;
 
   return (
     <section
       id="home"
       dir={isArabic ? "rtl" : "ltr"}
-      className="relative w-full h-screen mx-auto overflow-hidden flex flex-col md:flex-row items-center justify-center max-w-7xl px-4 sm:px-6 md:px-8 gap-0 md:gap-4 bg-primary"
+      className="relative w-full min-h-[90vh] mx-auto overflow-hidden flex flex-col-reverse md:flex-row items-center justify-center max-w-7xl px-4 sm:px-6 md:px-8 gap-6 md:gap-10 bg-primary"
     >
       <div className="relative z-10 text-center md:text-left w-full md:w-1/2 mt-2 md:mt-0 -translate-y-6 md:translate-y-0 order-2 md:order-1 flex flex-col items-center md:items-start justify-center gap-2 max-w-xl">
         <motion.p
@@ -62,16 +70,33 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.6 }}
           className={`text-sm sm:text-lg md:text-xl text-text-secondary max-w-xl text-center ${isArabic ? "font-tajawal sm:text-right" : "font-malgun sm:text-left"
-            } mb-2`}
+            } mb-4 leading-relaxed`}
         >
           {heroText.passion}
         </motion.p>
+
+        <motion.ul
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.8 }}
+          className={`grid gap-3 max-w-xl ${isArabic ? "text-right" : "text-left"} mb-6`}
+        >
+          {heroPoints.map((point, index) => (
+            <li
+              key={index}
+              className="flex items-start gap-3 text-text-secondary text-sm sm:text-base leading-6"
+            >
+              <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-primary-accent" />
+              <span>{point}</span>
+            </li>
+          ))}
+        </motion.ul>
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.8 }}
-          className="mt-2 flex flex-col md:flex-row justify-center md:justify-start gap-3"
+          className="mt-2 flex flex-col sm:flex-row justify-center md:justify-start gap-3 w-full md:w-auto"
         >
           <a href="#contact">
             <motion.button
@@ -150,7 +175,7 @@ const Hero = () => {
             whileTap={{ scale: 0.95 }}
             src={myPhoto}
             alt="Osama Dammag"
-            className="w-[200px] h-[200px] sm:w:[240px] sm:h-[240px] md:w-[280px] md:h-[280px] lg:w-[320px] lg:h-[320px] object-cover object-center items-center rounded-full border-4 border-white shadow-2xl relative z-10"
+            className="w-[200px] h-[200px] sm:w-[240px] sm:h-[240px] md:w-[280px] md:h-[280px] lg:w-[320px] lg:h-[320px] object-cover object-center items-center rounded-full border-4 border-white shadow-2xl relative z-10"
             // style={
             //   isDesktop
             //     ? {

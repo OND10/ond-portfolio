@@ -2,19 +2,15 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { getFooter } from "../constants";
 import {
-  FaFacebook,
   FaLinkedin,
   FaGithub,
-  FaInstagram,
-  FaYoutube,
+  FaEnvelope,
 } from "react-icons/fa";
 
 const iconsMap = {
-  FaFacebook,
   FaLinkedin,
   FaGithub,
-  FaInstagram,
-  FaYoutube,
+  FaEnvelope,
 };
 
 const Footer = () => {
@@ -24,15 +20,23 @@ const Footer = () => {
   const { title, description, socialLinks } = getFooter(lang);
 
   const navLinks = isArabic
-    ? ["الرئيسية", "عني", "شركائي", "خبراتي", "اعمالي", "اراء عني", "تواصل معي"]
+    ? [
+        { label: "الرئيسية", href: "#home" },
+        { label: "عني", href: "#about" },
+        { label: "تعليمي", href: "#education" },
+        { label: "خبراتي", href: "#work" },
+        { label: "اعمالي", href: "#projects" },
+        { label: "اراء عني", href: "#testimonials" },
+        { label: "تواصل معي", href: "#contact" },
+      ]
     : [
-        "Home",
-        "About",
-        "Partners",
-        "Experience",
-        "Projects",
-        "Testimonials",
-        "Contact",
+        { label: "Home", href: "#home" },
+        { label: "About", href: "#about" },
+        { label: "Education", href: "#education" },
+        { label: "Experience", href: "#work" },
+        { label: "Projects", href: "#projects" },
+        { label: "Testimonials", href: "#testimonials" },
+        { label: "Contact", href: "#contact" },
       ];
 
   return (
@@ -70,10 +74,10 @@ const Footer = () => {
               {navLinks.map((label, index) => (
                 <li key={index}>
                   <a
-                    href={`#${label.toLowerCase()}`}
+                    href={label.href}
                     className="hover:text-text-accent transition duration-300"
                   >
-                    {label}
+                    {label.label}
                   </a>
                 </li>
               ))}
