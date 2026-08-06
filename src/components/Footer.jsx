@@ -23,19 +23,19 @@ const Footer = () => {
     ? [
         { label: "الرئيسية", href: "#home" },
         { label: "عني", href: "#about" },
-        { label: "تعليمي", href: "#education" },
         { label: "خبراتي", href: "#work" },
         { label: "اعمالي", href: "#projects" },
-        { label: "اراء عني", href: "#testimonials" },
+        { label: "حزم NuGet", href: "#packages" },
+        { label: "مهاراتي", href: "#tech" },
         { label: "تواصل معي", href: "#contact" },
       ]
     : [
         { label: "Home", href: "#home" },
         { label: "About", href: "#about" },
-        { label: "Education", href: "#education" },
         { label: "Experience", href: "#work" },
         { label: "Projects", href: "#projects" },
-        { label: "Testimonials", href: "#testimonials" },
+        { label: "NuGet", href: "#packages" },
+        { label: "Skills", href: "#tech" },
         { label: "Contact", href: "#contact" },
       ];
 

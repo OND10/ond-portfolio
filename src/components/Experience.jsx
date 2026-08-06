@@ -17,13 +17,13 @@ const ExperienceCard = ({ experience, index, isArabic }) => (
     }}
     whileTap={{ scale: 0.95 }}
     transition={{ type: "tween", duration: 0.3 }}
-    className="glass-card hover-lift p-6 shadow-lg transition-transform group"
+    className="glass-card hover-lift p-6 shadow-lg transition-transform group w-full h-full flex flex-col"
   >
     <div className="flex items-center gap-4 mb-4">
       <motion.div
         whileHover={{ rotate: 360, scale: 1.1 }}
         transition={{ duration: 0.6 }}
-        className="flex justify-center items-center w-16 h-16 rounded-full bg-white/10 border border-glass-border p-2 group-hover:scale-110 transition-transform duration-300"
+        className="flex justify-center items-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/10 border border-glass-border p-2 group-hover:scale-110 transition-transform duration-300 shrink-0"
       >
         <img
           src={experience.icon}
@@ -55,8 +55,9 @@ const ExperienceCard = ({ experience, index, isArabic }) => (
       </div>
     </div>
     <ul
-      className={`list-disc list-inside space-y-2 text-sm text-text-secondary ${isArabic ? "font-tajawal text-right" : "font-malgun text-left"
-        }`}
+      className={`list-disc list-inside space-y-2 text-sm text-text-secondary flex-1 ${
+        isArabic ? "font-tajawal text-right" : "font-malgun text-left"
+      }`}
     >
       {experience.points.map((point, i) => (
         <motion.li
@@ -81,6 +82,7 @@ ExperienceCard.propTypes = {
     icon: PropTypes.string.isRequired,
     company_name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
     points: PropTypes.arrayOf(PropTypes.string).isRequired,
   }).isRequired,
   index: PropTypes.number.isRequired,
@@ -112,14 +114,15 @@ const Experience = () => {
           {subtitle}
         </p>
       </motion.div>
-      <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-stretch">
         {experiences.map((experience, index) => (
-          <ExperienceCard
-            key={`experience-${index}`}
-            experience={experience}
-            index={index}
-            isArabic={isArabic}
-          />
+          <div key={`experience-${index}`} className="h-full">
+            <ExperienceCard
+              experience={experience}
+              index={index}
+              isArabic={isArabic}
+            />
+          </div>
         ))}
       </div>
     </section>

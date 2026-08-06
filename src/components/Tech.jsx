@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
-import { SectionWrapper } from "../hoc";
-import { technologies } from "../constants";
 import { useTranslation } from "react-i18next";
+
 import { styles } from "../styles";
+import { skillGroups } from "../constants";
+import { SectionWrapper } from "../hoc";
+import { fadeIn, textVariant } from "../utils/motion";
 
 const Tech = () => {
   const { i18n } = useTranslation();
@@ -10,59 +12,57 @@ const Tech = () => {
   const isArabic = lang === "ar";
 
   const subtitle = isArabic
-    ? "ما أستخدمه في بناء المشاريع"
-    : "Tools I Use to Build Projects";
-  const title = isArabic ? "التقنيات" : "Technologies";
+    ? "أدوات وتقنيات أعتمد عليها في بناء المشاريع"
+    : "The technologies I rely on to build production-ready software";
 
   return (
-    <section
-      className={`w-full py-20 px-0 overflow-hidden ${
-        isArabic ? "text-right" : "text-left"
-      } bg-primary`}
-    >
-      <div className="text-center mb-12 px-4 ">
-        <h2 className={`${styles.sectionHeadText} ${isArabic ? "font-tajawal" : "font-preah"}`}>
-          {title}
+    <section id="tech" className="w-full py-10 bg-primary">
+      <motion.div variants={textVariant()}>
+        <h2
+          className={`${styles.sectionHeadText} ${
+            isArabic ? "font-tajawal" : "font-preah"
+          }`}
+        >
+          {isArabic ? "مهاراتي" : "My Skills"}
         </h2>
-        <p className={`mt-4 text-text-secondary text-sm ${isArabic ? "font-tajawal" : "font-preah"}`}>
+        <p
+          className={`mt-4 text-text-secondary text-sm sm:text-base text-center ${
+            isArabic ? "font-tajawal" : "font-preah"
+          }`}
+        >
           {subtitle}
         </p>
-      </div>
+      </motion.div>
 
-      <div className="flex flex-wrap justify-center gap-6 px-8">
-        {technologies.map((tech, index) => (
+      <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+        {skillGroups.map((group, groupIndex) => (
           <motion.div
-            key={tech.name}
-            className="glass-card hover-lift w-24 h-24 flex items-center justify-center group glow-animation"
-            whileHover={{ 
-              scale: 1.2, 
-              rotate: 360,
-              boxShadow: "0 0 30px rgba(102, 126, 234, 0.5)"
-            }}
-            whileTap={{ scale: 0.9 }}
-            // transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            initial={{ opacity: 0, y: 50, rotate: -180 }}
-            animate={{ opacity: 1, y: 0, rotate: 0 }}
-            transition={{ delay: index * 0.1, duration: 0.8 }}
+            key={group.title}
+            variants={fadeIn("up", "tween", groupIndex * 0.15, 0.5)}
+            className="glass-card hover-lift p-6 shadow-lg transition-all duration-300 flex flex-col"
           >
-            {tech.icon ? (
-              <motion.img
-                whileHover={{ scale: 1.3, rotate: 10 }}
-                src={tech.icon}
-                alt={tech.name}
-                className="w-16 h-16 object-contain group-hover:scale-110 transition-transform duration-300"
-                loading="lazy"
-              />
-            ) : (
-              <motion.span
-                whileHover={{ scale: 1.2, rotate: 5 }}
-                className={`text-sm text-text-primary font-bold ${
-                  isArabic ? "font-tajawal" : "font-malgun"
-                }`}
-              >
-                {tech.name}
-              </motion.span>
-            )}
+            <h3
+              className={`text-text-primary font-bold text-lg mb-5 pb-3 border-b border-glass-border ${
+                isArabic ? "font-tajawal text-right" : "font-preah text-left"
+              }`}
+            >
+              <span className="ond-gradient">
+                {isArabic ? group.titleAr : group.title}
+              </span>
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {group.skills.map((skill) => (
+                <motion.span
+                  key={skill}
+                  whileHover={{ scale: 1.08, y: -2 }}
+                  className={`px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium text-text-secondary bg-white/5 dark:bg-white/10 border border-glass-border hover:text-text-primary hover:border-[var(--primary)] transition-all duration-300 ${
+                    isArabic ? "font-tajawal" : "font-preah"
+                  }`}
+                >
+                  {skill}
+                </motion.span>
+              ))}
+            </div>
           </motion.div>
         ))}
       </div>

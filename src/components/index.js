@@ -5,6 +5,7 @@ import Partners from './Education';
 import Tech from './Tech';
 import Experience from './Experience';
 import Works from './Works';
+import Packages from './Packages';
 import Feedbacks from './Feedbacks';
 import Contact from './Contact';
 import Footer from './Footer';
@@ -17,6 +18,7 @@ export {
   Tech,
   Experience,
   Works,
+  Packages,
   Feedbacks,
   Contact,
   Footer,

@@ -9,7 +9,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { styles } from "../styles";
 
 const ServiceCard = ({ index, title, icon, isArabic }) => (
-  <Tilt className="w-full sm:w-[250px]">
+  <Tilt className="w-full h-full">
     <motion.div
       variants={fadeIn("right", "spring", index * 0.3, 0.75)}
       whileHover={{
@@ -19,7 +19,7 @@ const ServiceCard = ({ index, title, icon, isArabic }) => (
         boxShadow: "0 20px 40px rgba(102, 126, 234, 0.3)"
       }}
       whileTap={{ scale: 0.95 }}
-      className="glass-card hover-lift p-6 shadow-lg transition-all duration-300 group"
+      className="glass-card hover-lift p-6 shadow-lg transition-all duration-300 group h-full"
     >
       <div className="flex flex-col items-center text-center gap-4">
         <motion.div
@@ -78,8 +78,8 @@ const About = () => {
 
       <motion.div
         variants={fadeIn("", "", 0.1, 1)}
-        className={`glass-card hover-lift  p-8 max-w-6xl min-h-[220px] text-[18px] text-text-primary 
-    leading-[32px] shadow-lg md:text-justify sm:text-wrap sm:text-start`}
+        className={`glass-card hover-lift p-5 sm:p-8 max-w-6xl min-h-[220px] text-base sm:text-lg text-text-primary 
+    leading-[28px] sm:leading-[32px] shadow-lg`}
       >
         <div
           className={`${isArabic
@@ -90,14 +90,15 @@ const About = () => {
         />
       </motion.div>
 
-      <div className="mt-20 flex flex-wrap gap-12 justify-center ">
+      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
         {services.map((service, index) => (
-          <ServiceCard
-            key={index}
-            index={index}
-            {...service}
-            isArabic={isArabic}
-          />
+          <div key={index} className="h-full">
+            <ServiceCard
+              index={index}
+              {...service}
+              isArabic={isArabic}
+            />
+          </div>
         ))}
       </div>
     </section>

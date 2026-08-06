@@ -16,18 +16,17 @@ const Partners = () => {
   return (
     <section
       id="education"
-      className={`w-full py-20 ${isArabic ? "text-right" : "text-left"
-        } bg-[#fdfefe] dark:bg-[#0d0d11]`}
+      className={`w-full py-16 sm:py-20 ${isArabic ? "text-right" : "text-left"} bg-primary`}
     >
       <div className="text-center mb-10 px-4">
         <h2
-          className={`text-5xl font-bold ${isArabic ? "font-tajawal" : "font-preah"
-            } text-black dark:text-white`}
+          className={`text-3xl sm:text-5xl font-bold ${isArabic ? "font-tajawal" : "font-preah"
+            } text-text-primary`}
         >
           {partners.title}
         </h2>
         <p
-          className={`mt-4 text-gray-800 dark:text-gray-300 text-lg ${isArabic ? "font-tajawal" : "font-malgun"
+          className={`mt-4 text-text-secondary text-base sm:text-lg ${isArabic ? "font-tajawal" : "font-malgun"
             }`}
           dangerouslySetInnerHTML={{ __html: partners.description }}
         />
@@ -39,7 +38,7 @@ const Partners = () => {
             <img
               src={logo.src}
               alt={logo.alt}
-              className="h-24 sm:h-36 object-contain transition-all duration-500 ease-in-out drop-shadow-xl"
+              className="h-20 sm:h-32 object-contain transition-all duration-500 ease-in-out drop-shadow-xl"
               loading="lazy"
             />
           </div>

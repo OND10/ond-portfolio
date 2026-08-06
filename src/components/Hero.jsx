@@ -29,15 +29,13 @@ const Hero = () => {
   // const getButtonClass = () =>
   //   "modern-btn flex items-center justify-center gap-2 w-full md:w-auto px-6 py-3 hover-lift glow-animation font-semibold rounded-full transition duration-300";
 
-  const isDesktop = typeof window !== "undefined" && window.innerWidth >= 768;
-
   return (
     <section
       id="home"
       dir={isArabic ? "rtl" : "ltr"}
       className="relative w-full min-h-[90vh] mx-auto overflow-hidden flex flex-col-reverse md:flex-row items-center justify-center max-w-7xl px-4 sm:px-6 md:px-8 gap-6 md:gap-10 bg-primary"
     >
-      <div className="relative z-10 text-center md:text-left w-full md:w-1/2 mt-2 md:mt-0 -translate-y-6 md:translate-y-0 order-2 md:order-1 flex flex-col items-center md:items-start justify-center gap-2 max-w-xl">
+      <div className="relative z-10 text-center md:text-left w-full md:w-1/2 mt-2 md:mt-0 order-2 md:order-1 flex flex-col items-center md:items-start justify-center gap-2 max-w-xl">
         <motion.p
           initial={{ opacity: 0, x: isArabic ? 50 : -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -98,14 +96,14 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.8 }}
           className="mt-2 flex flex-col sm:flex-row justify-center md:justify-start gap-3 w-full md:w-auto"
         >
-          <a href="#contact">
+          <a href="#contact" className="w-full sm:w-auto">
             <motion.button
               whileHover={{ scale: 1.05, rotate: 2 }}
               whileTap={{ scale: 0.95 }}
-              className={`modern-btn flex items-center justify-center gap-2 w-56 px-6 py-3 hover-lift glow-animation ${isArabic ? "font-tajawal text-right" : "font-preah text-left"
+              className={`modern-btn flex items-center justify-center gap-2 w-full sm:w-56 px-6 py-3 hover-lift glow-animation ${isArabic ? "font-tajawal text-right" : "font-preah text-left"
                 }`}
             >
-              <ChatBubbleLeftRightIcon className="w-5 h-5" />
+              <ChatBubbleLeftRightIcon className="w-5 h-5 shrink-0" />
               {heroText.contact}
             </motion.button>
           </a>
@@ -113,14 +111,14 @@ const Hero = () => {
             href={CV}
             download={"OsamaDammag_CV"}
             target="_blank"
-            className={`flex items-center justify-center gap-2 w-56 px-6 py-3 glass-card hover-lift text-text-primary rounded-full shadow-lg transition duration-300 cursor-pointer ${isArabic ? "font-tajawal text-right" : "font-preah text-left"
+            className={`flex items-center justify-center gap-2 w-full sm:w-56 px-6 py-3 glass-card hover-lift text-text-primary rounded-full shadow-lg transition duration-300 cursor-pointer ${isArabic ? "font-tajawal text-right" : "font-preah text-left"
               }`}
           >
             <motion.div
               whileHover={{ scale: 1.1, rotate: 5 }}
               whileTap={{ scale: 0.9 }}
             >
-              <ArrowDownTrayIcon className="w-5 h-5" />
+              <ArrowDownTrayIcon className="w-5 h-5 shrink-0" />
             </motion.div>
             {heroText.download}
           </a>
@@ -133,57 +131,23 @@ const Hero = () => {
         transition={{ duration: 1.5, delay: 0.5, type: "spring", stiffness: 100 }}
         className="relative z-0 mb-10 md:mb-12 w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2"
       >
-        <div
-          className="relative w-[320px] h-[320px] lg:w-[400px] lg:h-[400px] flex items-center justify-center"
-          // style={
-          //   isDesktop
-          //     ? {
-          //       right: isArabic ? "auto" : "2.5rem",
-          //       left: isArabic ? "2.5rem" : "auto",
-          //     }
-          //     : {}
-          // }
-        >
+        <div className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] lg:w-[400px] lg:h-[400px] flex items-center justify-center mx-auto md:mx-0">
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            className="absolute top-8 w-full h-full rounded-full ond-bg-gradient opacity-35 blur-2xl"
-            style={
-              isDesktop
-                ? {
-                  right: isArabic ? "auto" : "2.5rem",
-                  left: isArabic ? "2.5rem" : "auto",
-                }
-                : {}
-            }
+            className="absolute top-8 w-full h-full rounded-full ond-bg-gradient opacity-35 blur-2xl md:right-10"
           />
           <motion.div
             animate={{ scale: [1, 1.1, 1], rotate: [0, 5, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-[7.5rem] w-[180px] h-[180px] sm:w-[200px] sm:h-[200px] lg:w-[200px] lg:h-[200px] rounded-full bg-white/70 dark:bg-white/50 blur-xl glow-animation"
-            style={
-              isDesktop
-                ? {
-                  left: isArabic ? "auto" : "5rem",
-                  right: isArabic ? "5rem" : "auto",
-                }
-                : {}
-            }
+            className="absolute top-[6rem] sm:top-[7.5rem] w-[160px] h-[160px] sm:w-[200px] sm:h-[200px] rounded-full bg-white/70 dark:bg-white/50 blur-xl glow-animation md:left-20"
           />
           <motion.img
             whileHover={{ scale: 1.1, rotate: 5 }}
             whileTap={{ scale: 0.95 }}
             src={myPhoto}
             alt="Osama Dammag"
-            className="w-[200px] h-[200px] sm:w-[240px] sm:h-[240px] md:w-[280px] md:h-[280px] lg:w-[320px] lg:h-[320px] object-cover object-center items-center rounded-full border-4 border-white shadow-2xl relative z-10"
-            // style={
-            //   isDesktop
-            //     ? {
-            //       right: isArabic ? "auto" : "1.5rem",
-            //       left: isArabic ? "1.5rem" : "auto",
-            //     }
-            //     : {}
-            // }
+            className="w-[180px] h-[180px] sm:w-[240px] sm:h-[240px] md:w-[280px] md:h-[280px] lg:w-[320px] lg:h-[320px] object-cover object-center rounded-full border-4 border-white shadow-2xl relative z-10"
             loading="lazy"
           />
         </div>

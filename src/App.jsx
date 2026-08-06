@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 
-import { About, Partners, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Footer } from "./components";
+import { About, Partners, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Packages, Footer } from "./components";
 
 const App = () => {
   return (
@@ -24,6 +24,9 @@ const App = () => {
         </div>
         <div className="slide-in-left">
           <Works />
+        </div>
+        <div className="slide-in-up">
+          <Packages />
         </div>
         <div className="slide-in-right">
           <Feedbacks />

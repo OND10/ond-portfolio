@@ -86,8 +86,8 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop nav links */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 hidden sm:block">
-          <ul className="list-none flex flex-row gap-8">
+        <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:block">
+          <ul className="list-none flex flex-row gap-5 xl:gap-8">
             {navLinks.map((nav) => (
               <li
                 key={nav.id}
@@ -95,7 +95,7 @@ const Navbar = () => {
                   active === nav.title
                     ? "ond-gradient font-semibold"
                     : ""
-                } text-sm sm:text-base text-text-secondary cursor-pointer transition-all duration-300 ease-in-out hover:text-text-primary hover:scale-105 hover:drop-shadow-md mb-1`}
+                } text-sm xl:text-base text-text-secondary cursor-pointer transition-all duration-300 ease-in-out hover:text-text-primary hover:scale-105 hover:drop-shadow-md mb-1`}
                 onClick={() => setActive(nav.title)}
               >
                 <a
@@ -136,7 +136,7 @@ const Navbar = () => {
           </button>
 
           {/* Mobile Menu */}
-          <div className="sm:hidden flex justify-end items-center relative">
+          <div className="md:hidden flex justify-end items-center relative">
             <button
               onClick={() => setToggle(!toggle)}
               className="text-text-primary focus:outline-none"
