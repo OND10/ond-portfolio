@@ -95,8 +95,8 @@ const Experience = () => {
   const isArabic = lang === "ar";
   const experiences = getExperiences(lang);
 
-  const subtitle = experiences[0]?.subtitle || "";
-  const ftitle = experiences[0]?.ftitle || "";
+  const subtitle = isArabic ? "ما فعلته حتى الآن" : "What I have done so far";
+  const ftitle = isArabic ? "الخبرات العملية" : "Work Experience";
 
   return (
     <section id="work" className="scroll-mt-28 w-full py-20 px-4 bg-primary">
