@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { getPartners } from "../constants";
+import university from "../assets/university.png";
 
 const Partners = () => {
   const { i18n } = useTranslation();
@@ -30,6 +31,22 @@ const Partners = () => {
           }`}
           dangerouslySetInnerHTML={{ __html: partners.description }}
         />
+      </div>
+
+      {/* Sana'a University Showcase */}
+      <div className="mx-auto w-full max-w-7xl px-3 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/20 shadow-2xl backdrop-blur-sm sm:rounded-3xl flex items-center justify-center p-4 sm:p-8">
+          <img
+            src={university}
+            alt={
+              isArabic
+                ? "جامعة صنعاء - الحكمة يمانية"
+                : "Sana'a University - Yemeni Wisdom and Leadership"
+            }
+            className="h-auto w-auto max-h-[45vh] sm:max-h-[55vh] lg:max-h-[60vh] max-w-full object-contain"
+            loading="lazy"
+          />
+        </div>
       </div>
     </section>
   );
