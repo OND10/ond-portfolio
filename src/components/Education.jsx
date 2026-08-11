@@ -31,22 +31,6 @@ const Partners = () => {
           dangerouslySetInnerHTML={{ __html: partners.description }}
         />
       </div>
-
-      {/* Sana'a University Showcase */}
-      <div className="mx-auto w-full max-w-7xl px-3 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/20 shadow-2xl backdrop-blur-sm sm:rounded-3xl">
-          <img
-            src="../assets/university.png"
-            alt={
-              isArabic
-                ? "جامعة صنعاء - الحكمة يمانية"
-                : "Sana'a University - Yemeni Wisdom and Leadership"
-            }
-            className="block h-auto w-full object-contain"
-            loading="lazy"
-          />
-        </div>
-      </div>
     </section>
   );
 };

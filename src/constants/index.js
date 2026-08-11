@@ -12,7 +12,6 @@ import {
   consultant,
   contentIcon,
   tabsera,
-  visual,
 } from "../assets";
 
 export const getHeroText = (lang) => {
@@ -127,28 +126,6 @@ export const getPartners = (lang) => {
 
 export const getExperiences = (lang) => [
   {
-    title: lang === "ar" ? "مطور .NET" : ".NET Developer",
-    company_name:
-      lang === "ar"
-        ? "ثروات للخدمات المالية والاستثمار"
-        : "Tharawat for Financial Services & Investment",
-    icon: tabsera,
-    iconBg: "#E6DEDD",
-    date: lang === "ar" ? "07/2025 - الآن" : "07/2025 - Present",
-    points:
-      lang === "ar"
-        ? [
-            "طورت واجهات برمجة تطبيقات .NET 8 وGraphQL باستخدام Clean Architecture مع Azure DevOps.",
-            "صممت حلولًا مالية متعددة المستأجرين مع مكتبات قابلة لإعادة الاستخدام وتعاملات آمنة.",
-            "أدرت خطوط CI/CD وآليات التحقق الآلي في Azure DevOps لتحسين استقرار النشر.",
-          ]
-        : [
-            "Built .NET 8 and GraphQL APIs using Clean Architecture with Azure DevOps.",
-            "Designed multi-tenant financial solutions with reusable service libraries and secure transaction flows.",
-            "Managed CI/CD pipelines and automated validation in Azure DevOps to improve deployment stability.",
-          ],
-  },
-  {
     title: lang === "ar" ? "مطور Full Stack" : "Full Stack Developer",
     company_name: "RTS (Real-Time Solutions)",
     icon: rts,
@@ -170,7 +147,7 @@ export const getExperiences = (lang) => [
   {
     title: lang === "ar" ? "مهندس برمجيات" : "Software Engineer",
     company_name: lang === "ar" ? "مؤسسة تبصرة" : "Tabsera Foundation",
-    icon: visual,
+    icon: tabsera,
     iconBg: "#383E56",
     date: "11/2024 - 11/2025",
     points:
