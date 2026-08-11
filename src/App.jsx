@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 
-import { About, Partners, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Packages, Footer } from "./components";
+import { About, Partners, Contact, Experience, Hero, Navbar, Tech, Works, Packages, Footer } from "./components";
 
 const App = () => {
   return (
@@ -27,9 +27,6 @@ const App = () => {
         </div>
         <div className="slide-in-up">
           <Packages />
-        </div>
-        <div className="slide-in-right">
-          <Feedbacks />
         </div>
         <div className='relative z-0 slide-in-up'>
           <Contact />
