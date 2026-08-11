@@ -14,17 +14,6 @@ const Hero = () => {
   const heroText = getHeroText(lang);
   const isArabic = lang === "ar";
 
-  const heroPoints = lang === "ar"
-    ? [
-        "خبرة أكثر من سنتين في .NET وAngular وReact",
-        "تنفيذ Clean Architecture وMicroservices وDDD",
-        "أتمتة CI/CD باستخدام Azure DevOps",
-      ]
-    : [
-        "2+ years of experience in .NET, Angular, and React",
-        "Implementing Clean Architecture, Microservices, and DDD",
-        "Automating CI/CD using Azure DevOps",
-      ];
 
   return (
     <section
@@ -104,24 +93,6 @@ const Hero = () => {
           {heroText.passion}
         </motion.p>
 
-        <motion.ul
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.8 }}
-          className={`grid gap-3 max-w-xl mb-6 ${
-            isArabic ? "text-right" : "text-left"
-          }`}
-        >
-          {heroPoints.map((point, index) => (
-            <li
-              key={index}
-              className="flex items-start gap-3 text-text-secondary text-sm sm:text-base leading-6"
-            >
-              <span className="mt-1.5 inline-flex h-2 w-2 rounded-full bg-accent shrink-0" />
-              <span>{point}</span>
-            </li>
-          ))}
-        </motion.ul>
 
         {/* Buttons - third block on mobile */}
         <motion.div

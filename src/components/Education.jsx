@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import Marquee from "react-fast-marquee";
 import { useTranslation } from "react-i18next";
 import { getPartners } from "../constants";
 
@@ -7,43 +5,48 @@ const Partners = () => {
   const { i18n } = useTranslation();
   const lang = i18n.language;
   const isArabic = lang === "ar";
-  const [partners, setPartners] = useState(getPartners(lang));
-
-  useEffect(() => {
-    setPartners(getPartners(i18n.language));
-  }, [i18n.language]);
+  const partners = getPartners(lang);
 
   return (
     <section
       id="education"
-      className={`w-full py-16 sm:py-20 ${isArabic ? "text-right" : "text-left"} bg-primary`}
+      className={`w-full bg-primary py-16 sm:py-20 lg:py-24 ${
+        isArabic ? "text-right" : "text-left"
+      }`}
     >
-      <div className="text-center mb-10 px-4">
+      {/* Section Header */}
+      <div className="mx-auto mb-10 w-full max-w-5xl px-4 text-center sm:mb-14 sm:px-6 lg:px-8">
         <h2
-          className={`text-3xl sm:text-5xl font-bold ${isArabic ? "font-tajawal" : "font-preah"
-            } text-text-primary`}
+          className={`text-3xl font-bold text-text-primary sm:text-4xl md:text-5xl ${
+            isArabic ? "font-tajawal" : "font-preah"
+          }`}
         >
           {partners.title}
         </h2>
+
         <p
-          className={`mt-4 text-text-secondary text-base sm:text-lg ${isArabic ? "font-tajawal" : "font-malgun"
-            }`}
+          className={`mx-auto mt-4 max-w-3xl text-sm leading-7 text-text-secondary sm:text-base sm:leading-8 md:text-lg ${
+            isArabic ? "font-tajawal" : "font-malgun"
+          }`}
           dangerouslySetInnerHTML={{ __html: partners.description }}
         />
       </div>
 
-      <Marquee speed={60} gradient={false}>
-        {partners.logos.map((logo, index) => (
-          <div key={index} className="mx-6 flex items-center justify-center">
-            <img
-              src={logo.src}
-              alt={logo.alt}
-              className="h-20 sm:h-32 object-contain transition-all duration-500 ease-in-out drop-shadow-xl"
-              loading="lazy"
-            />
-          </div>
-        ))}
-      </Marquee>
+      {/* Sana'a University Showcase */}
+      <div className="mx-auto w-full max-w-7xl px-3 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/20 shadow-2xl backdrop-blur-sm sm:rounded-3xl">
+          <img
+            src="../assets/university.png"
+            alt={
+              isArabic
+                ? "جامعة صنعاء - الحكمة يمانية"
+                : "Sana'a University - Yemeni Wisdom and Leadership"
+            }
+            className="block h-auto w-full object-contain"
+            loading="lazy"
+          />
+        </div>
+      </div>
     </section>
   );
 };

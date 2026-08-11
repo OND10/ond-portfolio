@@ -22,7 +22,7 @@ export const getHeroText = (lang) => {
         name: "أسامة",
         name2: "دماج",
         passion:
-          "مهندس برمجيات مع أكثر من سنتين خبرة في تطوير الويب الحديث باستخدام .NET وAngular وReact. أبني أنظمة قابلة للتوسع باستخدام Clean Architecture وMicroservices وDDD.",
+          "مهندس برمجيات مع أكثر من سنتين خبرة في تطوير الويب الحديث باستخدام .NET و. أبني أنظمة قابلة للتوسع باستخدام Clean Architecture وMicroservices وDDD.",
         contact: "تواصل معي",
         download: "تحميل السيرة الذاتية",
       }
@@ -31,7 +31,7 @@ export const getHeroText = (lang) => {
         name: "Osama",
         name2: "Dammag",
         passion:
-          "Software engineer with 2+ years of modern web development experience using .NET, Angular, and React. I build scalable systems with Clean Architecture, Microservices, and DDD.",
+          "Software engineer with 2+ years of modern web development experience using .NET. I build scalable systems with Clean Architecture, Microservices, and DDD.",
         contact: "Contact Me",
         download: "Download CV",
       };
@@ -56,16 +56,40 @@ export const getAboutText = (lang) => {
     stitle: lang === "ar" ? "أسامة ؟" : "Osama ?",
     description:
       lang === "ar"
-        ? `مرحبًا، أنا <span class="text-white font-tajawal font-bold">أسامة دماج</span> خريج علوم الحاسوب مع أكثر من سنتين خبرة عملية في تطوير الويب الحديث باستخدام .NET وAngular وReact. أركز على بناء تطبيقات مؤسسية قابلة للتوسع باستخدام Clean Architecture وDDD وMicroservices.
+        ? `مرحبًا، أنا <span class="text-white font-tajawal font-bold">أسامة دماج</span>، مهندس برمجيات وخريج علوم الحاسوب، شغوف ببناء الأنظمة البرمجية الحديثة والقابلة للتوسع، ولدي أكثر من سنتين من الخبرة العملية في تطوير تطبيقات الويب باستخدام .NET وC#.
 
-عملت على أنظمة متعددة المستأجرين والتطوير الخلفي عالي الأداء، وشاركت في بناء حزم NuGet قابلة لإعادة الاستخدام وأتمتة CI/CD باستخدام Azure DevOps.
+أركز بشكل أساسي على تطوير الأنظمة الخلفية (Backend) وبناء تطبيقات مؤسسية قوية باستخدام Clean Architecture وDomain-Driven Design (DDD) وMicroservices، مع اهتمام كبير بتصميم الأنظمة، فصل المسؤوليات، قابلية الاختبار والصيانة، وتحقيق أداء موثوق على المدى الطويل.
 
-أحب بناء حلول قابلة للصيانة وتعزيز الأداء باستخدام أدوات حديثة وممارسات برمجة قوية. دعنا نصنع تجربة رقمية ممتازة معًا.`
-        : `Hi, I'm <span class="text-text-primary font-bold">Osama Dammag</span>, a Computer Science graduate with over 2 years of hands-on experience in modern web development using .NET, Angular, and React. I focus on building enterprise-grade applications with Clean Architecture, DDD, and Microservices.
+خلال رحلتي العملية، عملت على أنظمة حقيقية تتضمن Multi-Tenancy وDB-per-Tenant، وأنظمة مالية ومحاسبية، ومعالجة العمليات والمعاملات، وإدارة العملات وأسعار الصرف، بالإضافة إلى تصميم حلول تعتمد على Domain Events وBackground Jobs. كما تعاملت مع تحسين أداء قواعد البيانات والاستعلامات، Redis للتخزين المؤقت، وRabbitMQ وMassTransit لبناء أنظمة تعتمد على الرسائل والأحداث والتواصل غير المتزامن.
 
-I have worked on multi-tenant systems and high-performance backend solutions, and I've contributed to reusable NuGet packages and automated CI/CD workflows using Azure DevOps.
+أهتم أيضًا بالجانب الهندسي الذي يتجاوز مجرد كتابة الكود. عملت على بناء حزم NuGet قابلة لإعادة الاستخدام، وأتمتة عمليات CI/CD باستخدام Azure DevOps، وتحليل أخطاء الـ pipelines والاستفادة من أدوات الذكاء الاصطناعي للمساعدة في تشخيص المشاكل وتحسين دورة حياة التطوير.
 
-I enjoy crafting maintainable solutions and improving performance with modern tools and strong engineering practices. Let's build an exceptional digital experience together.`,
+إلى جانب الـ Backend، أعمل على تطوير مهاراتي في بناء واجهات حديثة باستخدام React وTypeScript وNext.js، وأسعى إلى فهم النظام ككل، من تصميم الـ APIs والـ Domain Model وقواعد البيانات، إلى تجربة المستخدم وعمليات النشر والمراقبة.
+
+أؤمن أن كتابة الكود ليست الهدف بحد ذاتها؛ الهدف هو بناء أنظمة واضحة، قابلة للتوسع، سهلة الصيانة، وتستطيع الاستمرار في التطور مع نمو المنتج. أحب تحليل المشاكل المعقدة، فهم السبب الحقيقي وراءها، ثم تصميم حلول هندسية بسيطة وفعالة بدلًا من إضافة المزيد من التعقيد.
+
+طموحي هو الاستمرار في التطور كمهندس برمجيات، والتعمق أكثر في هندسة البرمجيات والأنظمة الموزعة وCloud-Native Architecture، والوصول إلى مستوى Senior Software Engineer قادر على تصميم وبناء أنظمة مؤسسية كبيرة من منظور تقني وهندسي متكامل.
+
+أحب التعلم المستمر، تجربة التقنيات الجديدة، ومشاركة المعرفة، وأبحث دائمًا عن تحديات جديدة تمنحني فرصة لبناء شيء حقيقي، حل مشكلة صعبة، والنمو كمهندس في كل مشروع أعمل عليه.
+
+إذا كنت تبحث عن شخص لا يكتفي بكتابة الكود، بل يهتم بفهم المشكلة، تصميم الحل، تحسين الأداء، وبناء نظام يمكن الاعتماد عليه وتطويره مستقبلًا، فهذا بالضبط النوع من الهندسة الذي أطمح إلى تقديمه.`
+        : `Hi, I'm <span class="text-text-primary font-bold">Osama Dammag</span>, a Computer Science graduate and software engineer passionate about building modern, scalable, and maintainable software systems, with more than 2 years of hands-on experience in web development using .NET and C#.
+
+My primary focus is backend engineering and enterprise application development, with a strong interest in Clean Architecture, Domain-Driven Design (DDD), Microservices, distributed systems, and software architecture. I care deeply about separation of concerns, maintainability, testability, performance, and designing systems that can evolve without becoming difficult to understand or maintain.
+
+Throughout my professional journey, I have worked on real-world systems involving Multi-Tenancy and DB-per-Tenant architectures, financial and accounting applications, transaction processing, multi-currency operations, exchange-rate management, Domain Events, and background job processing. I have also worked on performance optimization, database query optimization, Redis caching, and asynchronous communication using RabbitMQ and MassTransit.
+
+I also enjoy working on the engineering side of software development beyond simply writing application code. I have contributed to reusable NuGet packages, automated CI/CD workflows using Azure DevOps, and worked with development pipelines, build failures, logging, and automated troubleshooting workflows. I am particularly interested in how AI can be integrated into engineering workflows to analyze failures, identify root causes, and help developers resolve problems faster.
+
+Although backend engineering is my primary focus, I also work with modern frontend technologies such as React, TypeScript, and Next.js. My goal is not simply to know multiple technologies, but to understand how the different parts of a system work together — from domain modeling and API design to databases, frontend applications, deployment, and operational concerns.
+
+I believe that writing code is not the ultimate goal of software engineering. The real goal is to build systems that are understandable, reliable, scalable, maintainable, and capable of evolving as the business grows. I enjoy breaking down complex problems, understanding their underlying causes, and designing solutions that reduce unnecessary complexity rather than simply adding more code.
+
+My long-term goal is to continue growing as a software engineer and go deeper into software architecture, distributed systems, and cloud-native application design. I am working toward becoming a Senior Software Engineer who can not only implement features, but also reason about architecture, make engineering trade-offs, and design reliable systems at scale.
+
+I am naturally curious and believe strongly in continuous learning. I enjoy exploring new technologies, studying software architecture and engineering principles, experimenting with ideas, and turning what I learn into real projects and practical solutions.
+
+If you are looking for someone who does not simply write code, but cares about understanding the problem, designing the right solution, improving performance, and building software that can be trusted and evolved over time — that is the kind of engineer I am working to become.`,
   };
 };
 
@@ -75,16 +99,16 @@ export const getServices = (lang) => [
     icon: backendIcon,
   },
   {
+    title: lang === "ar" ? "مهندس برمجيات" : "Software Architect",
+    icon: contentIcon,
+  },
+  {
     title: lang === "ar" ? "مطور Angular/React" : "Frontend Developer",
     icon: integrationIcon,
   },
   {
     title: lang === "ar" ? "مهندس DevOps" : "DevOps Engineer",
     icon: consultant,
-  },
-  {
-    title: lang === "ar" ? "مهندس برمجيات" : "Software Architect",
-    icon: contentIcon,
   },
 ];
 
@@ -96,9 +120,7 @@ export const getPartners = (lang) => {
         ? `بكالوريوس في <span class="font-tajawal font-bold">علوم الحاسوب</span> من جامعة صنعاء، 2025`
         : `Bachelor of Computer Science from <span class="font-bold">Sana'a University</span>, 2025`,
     logos: [
-      { src: university, alt: "Sana'a University" },
-      { src: university, alt: "Sana'a University" },
-      { src: university, alt: "Sana'a University" },
+      { src: university, alt: "Sana'a University" }
     ],
   };
 };
@@ -106,7 +128,10 @@ export const getPartners = (lang) => {
 export const getExperiences = (lang) => [
   {
     title: lang === "ar" ? "مطور .NET" : ".NET Developer",
-    company_name: lang === "ar" ? "ثروات للخدمات المالية والاستثمار" : "Tharawat for Financial Services & Investment",
+    company_name:
+      lang === "ar"
+        ? "ثروات للخدمات المالية والاستثمار"
+        : "Tharawat for Financial Services & Investment",
     icon: tabsera,
     iconBg: "#E6DEDD",
     date: lang === "ar" ? "07/2025 - الآن" : "07/2025 - Present",
@@ -195,7 +220,10 @@ export const getProjects = (lang) => [
     live_link: "https://www.mansooriplatform.com/",
   },
   {
-    name: lang === "ar" ? "تطبيق Malabi (حجز الملاعب)" : "Malabi App (Sports Booking)",
+    name:
+      lang === "ar"
+        ? "تطبيق Malabi (حجز الملاعب)"
+        : "Malabi App (Sports Booking)",
     description:
       lang === "ar"
         ? "تطبيق Flutter لحجز الملاعب الرياضية الخاصة والعامة. الواجهة تستخدم GetX لإدارة الحالة مع فصل نظيف عبر MVC، والواجهة الخلفية API قابلة للتوسع بـ .NET 8 مبنية على مبادئ Clean Architecture لنقاط نهاية آمنة."
@@ -239,7 +267,10 @@ export const getProjects = (lang) => [
     live_link: "https://jood-stage.rts-ye.com:5304/",
   },
   {
-    name: lang === "ar" ? "مدونة OND Dev Blog (CodePulse)" : "OND Dev Blog (CodePulse)",
+    name:
+      lang === "ar"
+        ? "مدونة OND Dev Blog (CodePulse)"
+        : "OND Dev Blog (CodePulse)",
     description:
       lang === "ar"
         ? "منصة تدوين حديثة مبنية بـ Angular وASP.NET Core، مع مصادقة JWT وإنشاء محتوى عبر Markdown وإدارة صور سحابية."
@@ -254,7 +285,8 @@ export const getProjects = (lang) => [
     live_link: "",
   },
   {
-    name: lang === "ar" ? "نظام LMS - مشروع التخرج" : "LMS - Graduation Project",
+    name:
+      lang === "ar" ? "نظام LMS - مشروع التخرج" : "LMS - Graduation Project",
     description:
       lang === "ar"
         ? "نظام إدارة تعلم كامل المكدس باستخدام Laravel (الواجهة الخلفية) وReact (الواجهة الأمامية)، مع مصادقة Sanctum وتكامل بحث Algolia وتحديد معدل مخصص."
@@ -349,7 +381,8 @@ export const skillGroups = [
 
 export const getFooter = (lang) => {
   return {
-    title: lang === "ar" ? "أسامة دماج | ملف الأعمال" : "Osama Dammag | Portfolio",
+    title:
+      lang === "ar" ? "أسامة دماج | ملف الأعمال" : "Osama Dammag | Portfolio",
     description:
       lang === "ar"
         ? "© 2026 كل الحقوق محفوظة ل أسامة دماج"
